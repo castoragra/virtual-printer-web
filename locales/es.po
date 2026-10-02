@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Virtual Printer 1.0.0\n"
-"Report-Msgid-Bugs-To: https://github.com/castoragra/virtual-printer-web/issues\n"
+"Report-Msgid-Bugs-To: https://virtualprinter.es/#contact\n"
 "POT-Creation-Date: 2026-10-01 14:01+0000\n"
 "PO-Revision-Date: 2026-10-01 12:30+0000\n"
 "Last-Translator: Virtual Printer\n"

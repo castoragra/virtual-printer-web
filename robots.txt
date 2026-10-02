@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://castoragra.github.io/virtual-printer-web/sitemap.xml
+Sitemap: https://virtualprinter.es/sitemap.xml
