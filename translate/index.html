@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Translate Virtual Printer — translation guide</title>
+<meta name="description" content="Help translate Virtual Printer into your language with Poedit. Download the template, test your translation and send it.">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#2563eb">
+<link rel="canonical" href="https://castoragra.github.io/virtual-printer-web/translate/">
+<link rel="alternate" hreflang="en" href="https://castoragra.github.io/virtual-printer-web/translate/">
+<link rel="alternate" hreflang="es" href="https://castoragra.github.io/virtual-printer-web/es/traducir/">
+<link rel="alternate" hreflang="x-default" href="https://castoragra.github.io/virtual-printer-web/translate/">
+<link rel="icon" type="image/png" href="../img/favicon.png">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Virtual Printer">
+<meta property="og:title" content="Translate Virtual Printer — translation guide">
+<meta property="og:description" content="Help translate Virtual Printer into your language with Poedit. Download the template, test your translation and send it.">
+<meta property="og:url" content="https://castoragra.github.io/virtual-printer-web/translate/">
+<meta property="og:image" content="https://castoragra.github.io/virtual-printer-web/img/og-en.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Translate Virtual Printer — translation guide">
+<meta name="twitter:description" content="Help translate Virtual Printer into your language with Poedit. Download the template, test your translation and send it.">
+<meta name="twitter:image" content="https://castoragra.github.io/virtual-printer-web/img/og-en.png">
+
+<style>
+  :root {
+    --bg: #ffffff; --bg-soft: #f4f7fb; --text: #0f172a; --muted: #52607a; --line: #e2e8f0;
+    --brand: #2563eb; --brand-dark: #1d4ed8; --brand-soft: #dbeafe; --card: #ffffff; --shadow: 0 10px 30px rgba(15, 23, 42, .08);
+    --coffee: #ff5e5b; --ok: #15803d; --err: #b91c1c;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #0b1120; --bg-soft: #111a2e; --text: #e5edf8; --muted: #9aa8c0; --line: #1f2b45;
+            --brand: #4f8cff; --brand-dark: #3b7cf5; --brand-soft: #172a4f; --card: #121c31; --shadow: 0 10px 30px rgba(0, 0, 0, .35);
+            --ok: #4ade80; --err: #f87171; }
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background: var(--bg); color: var(--text); font: 17px/1.6 "Segoe UI", system-ui, -apple-system, Roboto, sans-serif; }
+  a { color: var(--brand); }
+  .wrap { max-width: 1120px; margin: 0 auto; padding: 0 20px; }
+  header.top { position: sticky; top: 0; z-index: 10; background: color-mix(in srgb, var(--bg) 88%, transparent);
+               backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); }
+  header.top .wrap { display: flex; align-items: center; gap: 16px; height: 60px; }
+  .brand { display: flex; align-items: center; gap: 10px; font-weight: 700; color: var(--text); text-decoration: none; font-size: 18px; }
+  .brand img { width: 30px; height: 30px; }
+  nav { margin-left: auto; display: flex; align-items: center; gap: 18px; font-size: 15px; }
+  nav a { color: var(--muted); text-decoration: none; }
+  nav a:hover { color: var(--text); }
+  nav a.lang { border: 1px solid var(--line); background: var(--card); color: var(--text); border-radius: 8px; padding: 3px 10px; font-size: 14px; }
+  .hero { padding: 64px 0 32px; text-align: center; }
+  .hero img.logo { width: 88px; height: 88px; }
+  h1 { font-size: clamp(32px, 5vw, 52px); line-height: 1.15; margin: 16px 0 12px; letter-spacing: -.02em; }
+  .lead { font-size: clamp(18px, 2.2vw, 21px); color: var(--muted); max-width: 720px; margin: 0 auto 28px; }
+  .buttons { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
+  .btn { display: inline-flex; align-items: center; gap: 8px; padding: 12px 22px; border-radius: 10px; font-weight: 600;
+         text-decoration: none; border: 1px solid transparent; font-size: 16px; cursor: pointer; font-family: inherit; }
+  .btn.primary { background: var(--brand); color: #fff; }
+  .btn.primary:hover { background: var(--brand-dark); }
+  .btn.secondary { border-color: var(--line); color: var(--text); background: var(--card); }
+  .btn.coffee { background: var(--coffee); color: #fff; }
+  .btn[disabled] { opacity: .6; cursor: not-allowed; }
+  .note { color: var(--muted); font-size: 14px; margin-top: 14px; }
+  .shot { margin: 40px auto 0; max-width: 1040px; border-radius: 12px; overflow: hidden; border: 1px solid var(--line); box-shadow: var(--shadow); }
+  .shot img { display: block; width: 100%; height: auto; }
+  section { padding: 64px 0; }
+  section.soft { background: var(--bg-soft); }
+  h2 { font-size: clamp(26px, 3.4vw, 34px); margin: 0 0 12px; letter-spacing: -.01em; }
+  h3 { font-size: 19px; margin: 26px 0 8px; }
+  .sub { color: var(--muted); margin: 0 0 32px; max-width: 760px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 18px; }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 22px; }
+  .card .ico { width: 40px; height: 40px; border-radius: 10px; background: var(--brand-soft); display: grid; place-items: center; font-size: 21px; margin-bottom: 12px; }
+  .card h3 { margin: 0 0 6px; font-size: 18px; }
+  .card p { margin: 0; color: var(--muted); font-size: 15.5px; }
+  ol.steps { counter-reset: step; list-style: none; padding: 0; margin: 0; display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+  ol.steps li { counter-increment: step; background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 20px 20px 20px 64px; position: relative; }
+  ol.steps li::before { content: counter(step); position: absolute; left: 20px; top: 18px; width: 30px; height: 30px; border-radius: 50%;
+                        background: var(--brand); color: #fff; display: grid; place-items: center; font-weight: 700; }
+  .two { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 18px; align-items: start; }
+  .center { text-align: center; }
+  .center .card { max-width: 720px; margin: 0 auto; padding: 32px; }
+  details { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 14px 18px; margin-bottom: 10px; }
+  summary { cursor: pointer; font-weight: 600; }
+  details p { color: var(--muted); margin: 10px 0 0; }
+  .prose { max-width: 780px; }
+  .prose li { margin: 6px 0; }
+  .prose { overflow-wrap: break-word; }
+  .prose table { border-collapse: collapse; width: 100%; margin: 12px 0; font-size: 15.5px; display: block; overflow-x: auto; }
+  .prose th, .prose td { border: 1px solid var(--line); padding: 8px 10px; text-align: left; vertical-align: top; }
+  form.contact { display: grid; gap: 14px; text-align: left; }
+  form.contact label { display: grid; gap: 6px; font-weight: 600; font-size: 15px; }
+  form.contact input, form.contact select, form.contact textarea {
+    font: inherit; font-weight: 400; padding: 10px 12px; border-radius: 8px; border: 1px solid var(--line); background: var(--bg); color: var(--text); }
+  form.contact textarea { min-height: 150px; resize: vertical; }
+  .trap { position: absolute; left: -10000px; width: 1px; height: 1px; overflow: hidden; }
+  .form-status { font-weight: 600; min-height: 1.5em; }
+  .form-status.ok { color: var(--ok); } .form-status.err { color: var(--err); }
+  footer { border-top: 1px solid var(--line); padding: 28px 0; color: var(--muted); font-size: 14px; }
+  footer .wrap { display: flex; flex-wrap: wrap; gap: 12px 24px; justify-content: space-between; }
+  footer a { color: var(--muted); }
+  code { background: var(--bg-soft); border: 1px solid var(--line); border-radius: 6px; padding: 1px 6px; font-size: .92em; overflow-wrap: anywhere; }
+  [hidden] { display: none !important; }
+  @media (max-width: 720px) { nav a.hide-sm { display: none; } .hero { padding-top: 40px; } section { padding: 48px 0; } }
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="../"><img src="../img/icon.png" alt="" width="30" height="30">Virtual Printer</a>
+    <nav aria-label="Main menu">
+      <a class="hide-sm" href="../#features">Features</a>
+      <a class="hide-sm" href="../translate/">Translate</a>
+      <a class="hide-sm" href="../#contact">Contact</a>
+      <a class="lang" href="../es/traducir/" hreflang="es" lang="es" data-lang-switch="es">ES</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section>
+    <div class="wrap prose">
+      <h1>Translate Virtual Printer</h1>
+      <p class="lead" style="margin-left:0">Thank you for helping! Translations are standard <b>gettext .po files</b>: plain text files that free tools can edit. You don't need to know how to program.</p>
+      <div class="buttons" style="justify-content:flex-start">
+        <a class="btn primary" href="../locales/virtual_printer.pot" download data-track="download-template">⬇ Download the template (.pot)</a>
+        <a class="btn secondary" href="../locales/es.po" download data-track="download-es-po">Spanish translation (es.po)</a>
+      </div>
+
+      <h2 style="margin-top:40px">1. Translate with Poedit</h2>
+      <ol>
+        <li>Install <a href="https://poedit.net/" rel="noopener">Poedit</a> (free).</li>
+        <li><b>New language:</b> open the template in Poedit, click <b>Create new translation</b> and pick your language. Save it as <code>xx.po</code> (<code>fr.po</code>, <code>pt_BR.po</code>, <code>de.po</code>…).<br>
+            <b>Fixing an existing language:</b> open its <code>.po</code> file instead, such as the Spanish one.</li>
+        <li>Translate the texts. Poedit shows the original and notes for translators.</li>
+      </ol>
+
+      <h3>Rules that keep the app working</h3>
+      <ul>
+        <li><b>Keep <code>{name}</code>-style placeholders</b> exactly as they are (you can move them): <code>Sent to {printer}</code> → <code>Envoyé à {printer}</code>. Poedit warns if one is missing.</li>
+        <li><b>Keep HTML tags</b> such as <code>&lt;b&gt;…&lt;/b&gt;</code> and <code>&lt;br&gt;</code>.</li>
+        <li><b><code>&amp;</code> in menus</b> marks the keyboard shortcut letter (<code>&amp;File</code> → Alt+F). Put it before a letter that suits your language and is not repeated in the same menu.</li>
+        <li>Keep <code>…</code> at the end of actions that open a dialog.</li>
+        <li>“Receipt” means a POS/till ticket from a thermal printer, not a proof of payment.</li>
+        <li>Some texts have <b>singular and plural</b> forms: fill in every form Poedit shows.</li>
+      </ul>
+
+      <h2 style="margin-top:40px">2. Test it in the app</h2>
+      <p>You don't need to build anything:</p>
+      <ol>
+        <li>Copy your <code>xx.po</code> to <code>%USERPROFILE%\.virtual_printer\locales\</code> (create the <code>locales</code> folder if needed).</li>
+        <li>Restart Virtual Printer and choose your language in <b>Options › Language</b>.</li>
+      </ol>
+      <p>That file takes priority over the one included in the app, so you can keep editing and restarting. If a translation breaks a <code>{placeholder}</code>, the app shows the English text for that line and writes a warning to <code>virtual_printer.log</code>.</p>
+
+      <h2 style="margin-top:40px">3. Send it</h2>
+      <p>Write to us through the <a href="../#contact">contact form</a> choosing <b>A translation</b> as the topic and telling us the language. We will reply by email so you can send us the <code>.po</code> file.</p>
+      <p>Your name will be credited in the release notes if you wish. By sending a translation you agree that it may be included and distributed, free of charge, with Virtual Printer and this website.</p>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Virtual Printer · Free to use · <a href="../LICENSE.txt">License</a> · <a href="../privacy/">Privacy</a></span>
+    <span><a href="../translate/">Translate</a> · <a href="../#contact">Contact</a> · <a href="https://ko-fi.com/castorad" rel="noopener" target="_blank" data-track="kofi">Buy me a coffee</a></span>
+  </div>
+</footer>
+
+<script>
+  // Recordar el idioma elegido; en la portada inglesa, proponer el español a quien lo usa
+  (function () {
+    function get() { try { return localStorage.getItem("vp-lang"); } catch (e) { return null; } }
+    function set(v) { try { localStorage.setItem("vp-lang", v); } catch (e) { /* sin almacenamiento */ } }
+    document.querySelectorAll("[data-lang-switch]").forEach(a => a.addEventListener("click", () => set(a.dataset.langSwitch)));
+    if ("en" === "en" && "translate" === "index" && !get() && (navigator.language || "").toLowerCase().startsWith("es")
+        && !document.referrer.startsWith(location.origin)) {
+      location.replace("../es/");
+    }
+  })();
+
+  // Analítica (GoatCounter: sin cookies ni datos personales). Solo si hay código configurado.
+  const GOATCOUNTER = "";
+  function track(name) {
+    if (window.goatcounter && window.goatcounter.count) {
+      window.goatcounter.count({ path: name, title: name, event: true });
+    }
+  }
+  if (GOATCOUNTER) {
+    const s = document.createElement("script");
+    s.async = true; s.src = "https://gc.zgo.at/count.js";
+    s.dataset.goatcounter = `https://${GOATCOUNTER}.goatcounter.com/count`;
+    document.head.appendChild(s);
+  }
+  document.querySelectorAll("[data-track]").forEach(el => el.addEventListener("click", () => track(el.dataset.track)));
+</script>
+
+</body>
+</html>

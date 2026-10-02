@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Política de privacidad — Virtual Printer</title>
+<meta name="description" content="Cómo tratan tus datos la web y la app de Virtual Printer: estadísticas sin cookies, el formulario de contacto y documentos solo en tu equipo.">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#2563eb">
+<link rel="canonical" href="https://castoragra.github.io/virtual-printer-web/es/privacidad/">
+<link rel="alternate" hreflang="en" href="https://castoragra.github.io/virtual-printer-web/privacy/">
+<link rel="alternate" hreflang="es" href="https://castoragra.github.io/virtual-printer-web/es/privacidad/">
+<link rel="alternate" hreflang="x-default" href="https://castoragra.github.io/virtual-printer-web/privacy/">
+<link rel="icon" type="image/png" href="../../img/favicon.png">
+<link rel="apple-touch-icon" href="../../img/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Virtual Printer">
+<meta property="og:title" content="Política de privacidad — Virtual Printer">
+<meta property="og:description" content="Cómo tratan tus datos la web y la app de Virtual Printer: estadísticas sin cookies, el formulario de contacto y documentos solo en tu equipo.">
+<meta property="og:url" content="https://castoragra.github.io/virtual-printer-web/es/privacidad/">
+<meta property="og:image" content="https://castoragra.github.io/virtual-printer-web/img/og-es.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="es_ES">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Política de privacidad — Virtual Printer">
+<meta name="twitter:description" content="Cómo tratan tus datos la web y la app de Virtual Printer: estadísticas sin cookies, el formulario de contacto y documentos solo en tu equipo.">
+<meta name="twitter:image" content="https://castoragra.github.io/virtual-printer-web/img/og-es.png">
+
+<style>
+  :root {
+    --bg: #ffffff; --bg-soft: #f4f7fb; --text: #0f172a; --muted: #52607a; --line: #e2e8f0;
+    --brand: #2563eb; --brand-dark: #1d4ed8; --brand-soft: #dbeafe; --card: #ffffff; --shadow: 0 10px 30px rgba(15, 23, 42, .08);
+    --coffee: #ff5e5b; --ok: #15803d; --err: #b91c1c;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #0b1120; --bg-soft: #111a2e; --text: #e5edf8; --muted: #9aa8c0; --line: #1f2b45;
+            --brand: #4f8cff; --brand-dark: #3b7cf5; --brand-soft: #172a4f; --card: #121c31; --shadow: 0 10px 30px rgba(0, 0, 0, .35);
+            --ok: #4ade80; --err: #f87171; }
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background: var(--bg); color: var(--text); font: 17px/1.6 "Segoe UI", system-ui, -apple-system, Roboto, sans-serif; }
+  a { color: var(--brand); }
+  .wrap { max-width: 1120px; margin: 0 auto; padding: 0 20px; }
+  header.top { position: sticky; top: 0; z-index: 10; background: color-mix(in srgb, var(--bg) 88%, transparent);
+               backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); }
+  header.top .wrap { display: flex; align-items: center; gap: 16px; height: 60px; }
+  .brand { display: flex; align-items: center; gap: 10px; font-weight: 700; color: var(--text); text-decoration: none; font-size: 18px; }
+  .brand img { width: 30px; height: 30px; }
+  nav { margin-left: auto; display: flex; align-items: center; gap: 18px; font-size: 15px; }
+  nav a { color: var(--muted); text-decoration: none; }
+  nav a:hover { color: var(--text); }
+  nav a.lang { border: 1px solid var(--line); background: var(--card); color: var(--text); border-radius: 8px; padding: 3px 10px; font-size: 14px; }
+  .hero { padding: 64px 0 32px; text-align: center; }
+  .hero img.logo { width: 88px; height: 88px; }
+  h1 { font-size: clamp(32px, 5vw, 52px); line-height: 1.15; margin: 16px 0 12px; letter-spacing: -.02em; }
+  .lead { font-size: clamp(18px, 2.2vw, 21px); color: var(--muted); max-width: 720px; margin: 0 auto 28px; }
+  .buttons { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
+  .btn { display: inline-flex; align-items: center; gap: 8px; padding: 12px 22px; border-radius: 10px; font-weight: 600;
+         text-decoration: none; border: 1px solid transparent; font-size: 16px; cursor: pointer; font-family: inherit; }
+  .btn.primary { background: var(--brand); color: #fff; }
+  .btn.primary:hover { background: var(--brand-dark); }
+  .btn.secondary { border-color: var(--line); color: var(--text); background: var(--card); }
+  .btn.coffee { background: var(--coffee); color: #fff; }
+  .btn[disabled] { opacity: .6; cursor: not-allowed; }
+  .note { color: var(--muted); font-size: 14px; margin-top: 14px; }
+  .shot { margin: 40px auto 0; max-width: 1040px; border-radius: 12px; overflow: hidden; border: 1px solid var(--line); box-shadow: var(--shadow); }
+  .shot img { display: block; width: 100%; height: auto; }
+  section { padding: 64px 0; }
+  section.soft { background: var(--bg-soft); }
+  h2 { font-size: clamp(26px, 3.4vw, 34px); margin: 0 0 12px; letter-spacing: -.01em; }
+  h3 { font-size: 19px; margin: 26px 0 8px; }
+  .sub { color: var(--muted); margin: 0 0 32px; max-width: 760px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 18px; }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 22px; }
+  .card .ico { width: 40px; height: 40px; border-radius: 10px; background: var(--brand-soft); display: grid; place-items: center; font-size: 21px; margin-bottom: 12px; }
+  .card h3 { margin: 0 0 6px; font-size: 18px; }
+  .card p { margin: 0; color: var(--muted); font-size: 15.5px; }
+  ol.steps { counter-reset: step; list-style: none; padding: 0; margin: 0; display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+  ol.steps li { counter-increment: step; background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 20px 20px 20px 64px; position: relative; }
+  ol.steps li::before { content: counter(step); position: absolute; left: 20px; top: 18px; width: 30px; height: 30px; border-radius: 50%;
+                        background: var(--brand); color: #fff; display: grid; place-items: center; font-weight: 700; }
+  .two { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 18px; align-items: start; }
+  .center { text-align: center; }
+  .center .card { max-width: 720px; margin: 0 auto; padding: 32px; }
+  details { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 14px 18px; margin-bottom: 10px; }
+  summary { cursor: pointer; font-weight: 600; }
+  details p { color: var(--muted); margin: 10px 0 0; }
+  .prose { max-width: 780px; }
+  .prose li { margin: 6px 0; }
+  .prose { overflow-wrap: break-word; }
+  .prose table { border-collapse: collapse; width: 100%; margin: 12px 0; font-size: 15.5px; display: block; overflow-x: auto; }
+  .prose th, .prose td { border: 1px solid var(--line); padding: 8px 10px; text-align: left; vertical-align: top; }
+  form.contact { display: grid; gap: 14px; text-align: left; }
+  form.contact label { display: grid; gap: 6px; font-weight: 600; font-size: 15px; }
+  form.contact input, form.contact select, form.contact textarea {
+    font: inherit; font-weight: 400; padding: 10px 12px; border-radius: 8px; border: 1px solid var(--line); background: var(--bg); color: var(--text); }
+  form.contact textarea { min-height: 150px; resize: vertical; }
+  .trap { position: absolute; left: -10000px; width: 1px; height: 1px; overflow: hidden; }
+  .form-status { font-weight: 600; min-height: 1.5em; }
+  .form-status.ok { color: var(--ok); } .form-status.err { color: var(--err); }
+  footer { border-top: 1px solid var(--line); padding: 28px 0; color: var(--muted); font-size: 14px; }
+  footer .wrap { display: flex; flex-wrap: wrap; gap: 12px 24px; justify-content: space-between; }
+  footer a { color: var(--muted); }
+  code { background: var(--bg-soft); border: 1px solid var(--line); border-radius: 6px; padding: 1px 6px; font-size: .92em; overflow-wrap: anywhere; }
+  [hidden] { display: none !important; }
+  @media (max-width: 720px) { nav a.hide-sm { display: none; } .hero { padding-top: 40px; } section { padding: 48px 0; } }
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="../../es/"><img src="../../img/icon.png" alt="" width="30" height="30">Virtual Printer</a>
+    <nav aria-label="Menú principal">
+      <a class="hide-sm" href="../../es/#features">Funciones</a>
+      <a class="hide-sm" href="../../es/traducir/">Traducir</a>
+      <a class="hide-sm" href="../../es/#contact">Contacto</a>
+      <a class="lang" href="../../privacy/" hreflang="en" lang="en" data-lang-switch="en">EN</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section>
+    <div class="wrap prose">
+      <h1>Política de privacidad</h1>
+      <p class="note">Última actualización: 2026-10-02</p>
+
+      <h2>Responsable</h2>
+      <p>Virtual Printer. Para cualquier cuestión sobre tus datos, escríbenos con el <a href="../../es/#contact">formulario de contacto</a>.</p>
+
+      <h2>La aplicación</h2>
+      <p>Virtual Printer funciona solo en tu equipo. Los documentos y tickets que captura se guardan en <code>%USERPROFILE%\.virtual_printer</code> y <b>no se envían a ningún sitio</b>. La app no incluye estadísticas de uso ni telemetría.</p>
+
+      <h2>Esta web</h2>
+      <table>
+        <tr><th>Qué</th><th>Datos</th><th>Para qué y con quién</th></tr>
+        <tr><td>Estadísticas de visitas</td>
+            <td>Página visitada, web de procedencia, navegador, tamaño de pantalla y país aproximado. <b>Sin cookies</b> ni identificadores; la dirección IP no se guarda.</td>
+            <td>Saber cuántas personas visitan la web y descargan la app. Servicio: <a href="https://www.goatcounter.com/" rel="noopener">GoatCounter</a>.</td></tr>
+        <tr><td>Formulario de contacto</td>
+            <td>Nombre, correo electrónico y el mensaje que escribas.</td>
+            <td>Responderte. Se reenvían a nuestro correo mediante <a href="https://web3forms.com/" rel="noopener">Web3Forms</a> y no se usan para nada más. La comprobación anti-spam la hace <a href="https://www.hcaptcha.com/privacy" rel="noopener">hCaptcha</a>.</td></tr>
+        <tr><td>Alojamiento</td>
+            <td>Registros técnicos del servidor (como la dirección IP).</td>
+            <td>Servir la web. La aloja GitHub Pages (GitHub, Inc.).</td></tr>
+        <tr><td>Donaciones</td>
+            <td>Los que facilites a Ko-fi.</td>
+            <td>Ko-fi es un servicio externo con su propia política de privacidad; esta web no recibe tus datos de pago.</td></tr>
+      </table>
+      <p>Esta web <b>no usa cookies</b>. Solo guarda en tu navegador el idioma que elijas (almacenamiento local), que puedes borrar cuando quieras.</p>
+
+      <h2>Conservación y tus derechos</h2>
+      <p>Los mensajes del formulario se conservan el tiempo necesario para atenderte. Puedes pedir acceder a tus datos, rectificarlos o suprimirlos, oponerte a su tratamiento o limitarlo, escribiéndonos con el formulario. También puedes reclamar ante la <a href="https://www.aepd.es/" rel="noopener">Agencia Española de Protección de Datos</a>.</p>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Virtual Printer · Uso gratuito · <a href="../../LICENSE.txt">Licencia</a> · <a href="../../es/privacidad/">Privacidad</a></span>
+    <span><a href="../../es/traducir/">Traducir</a> · <a href="../../es/#contact">Contacto</a> · <a href="https://ko-fi.com/castorad" rel="noopener" target="_blank" data-track="kofi">Invítame a un café</a></span>
+  </div>
+</footer>
+
+<script>
+  // Recordar el idioma elegido; en la portada inglesa, proponer el español a quien lo usa
+  (function () {
+    function get() { try { return localStorage.getItem("vp-lang"); } catch (e) { return null; } }
+    function set(v) { try { localStorage.setItem("vp-lang", v); } catch (e) { /* sin almacenamiento */ } }
+    document.querySelectorAll("[data-lang-switch]").forEach(a => a.addEventListener("click", () => set(a.dataset.langSwitch)));
+    if ("es" === "en" && "privacy" === "index" && !get() && (navigator.language || "").toLowerCase().startsWith("es")
+        && !document.referrer.startsWith(location.origin)) {
+      location.replace("../../es/");
+    }
+  })();
+
+  // Analítica (GoatCounter: sin cookies ni datos personales). Solo si hay código configurado.
+  const GOATCOUNTER = "";
+  function track(name) {
+    if (window.goatcounter && window.goatcounter.count) {
+      window.goatcounter.count({ path: name, title: name, event: true });
+    }
+  }
+  if (GOATCOUNTER) {
+    const s = document.createElement("script");
+    s.async = true; s.src = "https://gc.zgo.at/count.js";
+    s.dataset.goatcounter = `https://${GOATCOUNTER}.goatcounter.com/count`;
+    document.head.appendChild(s);
+  }
+  document.querySelectorAll("[data-track]").forEach(el => el.addEventListener("click", () => track(el.dataset.track)));
+</script>
+
+</body>
+</html>

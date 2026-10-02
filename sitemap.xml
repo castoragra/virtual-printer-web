@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://castoragra.github.io/virtual-printer-web/</loc>
+    <lastmod>2026-10-02</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://castoragra.github.io/virtual-printer-web/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://castoragra.github.io/virtual-printer-web/es/"/>
+  </url>
+  <url>
+    <loc>https://castoragra.github.io/virtual-printer-web/es/</loc>
+    <lastmod>2026-10-02</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://castoragra.github.io/virtual-printer-web/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://castoragra.github.io/virtual-printer-web/es/"/>
+  </url>
+  <url>
+    <loc>https://castoragra.github.io/virtual-printer-web/translate/</loc>
+    <lastmod>2026-10-02</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://castoragra.github.io/virtual-printer-web/translate/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://castoragra.github.io/virtual-printer-web/es/traducir/"/>
+  </url>
+  <url>
+    <loc>https://castoragra.github.io/virtual-printer-web/es/traducir/</loc>
+    <lastmod>2026-10-02</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://castoragra.github.io/virtual-printer-web/translate/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://castoragra.github.io/virtual-printer-web/es/traducir/"/>
+  </url>
+  <url>
+    <loc>https://castoragra.github.io/virtual-printer-web/privacy/</loc>
+    <lastmod>2026-10-02</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://castoragra.github.io/virtual-printer-web/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://castoragra.github.io/virtual-printer-web/es/privacidad/"/>
+  </url>
+  <url>
+    <loc>https://castoragra.github.io/virtual-printer-web/es/privacidad/</loc>
+    <lastmod>2026-10-02</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://castoragra.github.io/virtual-printer-web/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://castoragra.github.io/virtual-printer-web/es/privacidad/"/>
+  </url>
+</urlset>

@@ -1,0 +1,339 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Virtual Printer — historial de impresión gratis para Windows</title>
+<meta name="description" content="Impresoras virtuales gratis para Windows que guardan cada PDF y ticket ESC/POS que imprimes, por USB o red, en un historial con búsqueda.">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#2563eb">
+<link rel="canonical" href="https://castoragra.github.io/virtual-printer-web/es/">
+<link rel="alternate" hreflang="en" href="https://castoragra.github.io/virtual-printer-web/">
+<link rel="alternate" hreflang="es" href="https://castoragra.github.io/virtual-printer-web/es/">
+<link rel="alternate" hreflang="x-default" href="https://castoragra.github.io/virtual-printer-web/">
+<link rel="icon" type="image/png" href="../img/favicon.png">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Virtual Printer">
+<meta property="og:title" content="Virtual Printer — historial de impresión gratis para Windows">
+<meta property="og:description" content="Impresoras virtuales gratis para Windows que guardan cada PDF y ticket ESC/POS que imprimes, por USB o red, en un historial con búsqueda.">
+<meta property="og:url" content="https://castoragra.github.io/virtual-printer-web/es/">
+<meta property="og:image" content="https://castoragra.github.io/virtual-printer-web/img/og-es.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="es_ES">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Virtual Printer — historial de impresión gratis para Windows">
+<meta name="twitter:description" content="Impresoras virtuales gratis para Windows que guardan cada PDF y ticket ESC/POS que imprimes, por USB o red, en un historial con búsqueda.">
+<meta name="twitter:image" content="https://castoragra.github.io/virtual-printer-web/img/og-es.png">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Virtual Printer", "applicationCategory": "UtilitiesApplication", "operatingSystem": "Windows 10, Windows 11", "softwareVersion": "1.0.0", "description": "Impresoras virtuales gratis para Windows que guardan cada PDF y ticket ESC/POS que imprimes, por USB o red, en un historial con búsqueda.", "url": "https://castoragra.github.io/virtual-printer-web/es/", "downloadUrl": "https://castoragra.github.io/virtual-printer-web/download/1.0.0/VirtualPrinter-1.0.0-setup.exe", "image": "https://castoragra.github.io/virtual-printer-web/img/icon.png", "screenshot": "https://castoragra.github.io/virtual-printer-web/img/screenshot-es.png", "inLanguage": ["en", "es"], "offers": {"@type": "Offer", "price": "0", "priceCurrency": "EUR"}, "publisher": {"@type": "Organization", "name": "Virtual Printer"}, "fileSize": "29.7 MB"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "¿De verdad es gratis?", "acceptedAnswer": {"@type": "Answer", "text": "Sí. Puedes usarla gratis, en casa o en el trabajo, en todos los equipos que quieras. No tiene anuncios ni versión de pago; las donaciones son voluntarias."}}, {"@type": "Question", "name": "Windows SmartScreen me avisa al abrir el instalador", "acceptedAnswer": {"@type": "Answer", "text": "El instalador aún no está firmado digitalmente. Pulsa «Más información» › «Ejecutar de todas formas»."}}, {"@type": "Question", "name": "¿Con qué programas de TPV funciona?", "acceptedAnswer": {"@type": "Answer", "text": "Con cualquier programa que imprima tickets ESC/POS en una impresora de Windows (elige «Generic / Text Only») o en una impresora de red por IP (puerto 9100). Si el programa imprime con gráficos de Windows, usa el driver de tu impresora de tickets (p. ej. POS80)."}}, {"@type": "Question", "name": "¿Dónde se guardan mis documentos?", "acceptedAnswer": {"@type": "Answer", "text": "Solo en tu equipo, en %USERPROFILE%\\.virtual_printer. La app no envía tus documentos ni datos de uso a ningún sitio."}}, {"@type": "Question", "name": "¿Qué necesito?", "acceptedAnswer": {"@type": "Answer", "text": "Windows 10 u 11 de 64 bits. La característica «Microsoft Print to PDF» para las impresoras de documentos, que Windows trae de serie."}}, {"@type": "Question", "name": "¿Cómo la desinstalo?", "acceptedAnswer": {"@type": "Answer", "text": "Si ya no quieres las impresoras virtuales, elimínalas antes desde la app; después desinstala Virtual Printer desde Configuración › Aplicaciones de Windows. Tus documentos capturados se conservan en tu carpeta de usuario hasta que los borres."}}]}</script>
+<style>
+  :root {
+    --bg: #ffffff; --bg-soft: #f4f7fb; --text: #0f172a; --muted: #52607a; --line: #e2e8f0;
+    --brand: #2563eb; --brand-dark: #1d4ed8; --brand-soft: #dbeafe; --card: #ffffff; --shadow: 0 10px 30px rgba(15, 23, 42, .08);
+    --coffee: #ff5e5b; --ok: #15803d; --err: #b91c1c;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #0b1120; --bg-soft: #111a2e; --text: #e5edf8; --muted: #9aa8c0; --line: #1f2b45;
+            --brand: #4f8cff; --brand-dark: #3b7cf5; --brand-soft: #172a4f; --card: #121c31; --shadow: 0 10px 30px rgba(0, 0, 0, .35);
+            --ok: #4ade80; --err: #f87171; }
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background: var(--bg); color: var(--text); font: 17px/1.6 "Segoe UI", system-ui, -apple-system, Roboto, sans-serif; }
+  a { color: var(--brand); }
+  .wrap { max-width: 1120px; margin: 0 auto; padding: 0 20px; }
+  header.top { position: sticky; top: 0; z-index: 10; background: color-mix(in srgb, var(--bg) 88%, transparent);
+               backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); }
+  header.top .wrap { display: flex; align-items: center; gap: 16px; height: 60px; }
+  .brand { display: flex; align-items: center; gap: 10px; font-weight: 700; color: var(--text); text-decoration: none; font-size: 18px; }
+  .brand img { width: 30px; height: 30px; }
+  nav { margin-left: auto; display: flex; align-items: center; gap: 18px; font-size: 15px; }
+  nav a { color: var(--muted); text-decoration: none; }
+  nav a:hover { color: var(--text); }
+  nav a.lang { border: 1px solid var(--line); background: var(--card); color: var(--text); border-radius: 8px; padding: 3px 10px; font-size: 14px; }
+  .hero { padding: 64px 0 32px; text-align: center; }
+  .hero img.logo { width: 88px; height: 88px; }
+  h1 { font-size: clamp(32px, 5vw, 52px); line-height: 1.15; margin: 16px 0 12px; letter-spacing: -.02em; }
+  .lead { font-size: clamp(18px, 2.2vw, 21px); color: var(--muted); max-width: 720px; margin: 0 auto 28px; }
+  .buttons { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
+  .btn { display: inline-flex; align-items: center; gap: 8px; padding: 12px 22px; border-radius: 10px; font-weight: 600;
+         text-decoration: none; border: 1px solid transparent; font-size: 16px; cursor: pointer; font-family: inherit; }
+  .btn.primary { background: var(--brand); color: #fff; }
+  .btn.primary:hover { background: var(--brand-dark); }
+  .btn.secondary { border-color: var(--line); color: var(--text); background: var(--card); }
+  .btn.coffee { background: var(--coffee); color: #fff; }
+  .btn[disabled] { opacity: .6; cursor: not-allowed; }
+  .note { color: var(--muted); font-size: 14px; margin-top: 14px; }
+  .shot { margin: 40px auto 0; max-width: 1040px; border-radius: 12px; overflow: hidden; border: 1px solid var(--line); box-shadow: var(--shadow); }
+  .shot img { display: block; width: 100%; height: auto; }
+  section { padding: 64px 0; }
+  section.soft { background: var(--bg-soft); }
+  h2 { font-size: clamp(26px, 3.4vw, 34px); margin: 0 0 12px; letter-spacing: -.01em; }
+  h3 { font-size: 19px; margin: 26px 0 8px; }
+  .sub { color: var(--muted); margin: 0 0 32px; max-width: 760px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 18px; }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 22px; }
+  .card .ico { width: 40px; height: 40px; border-radius: 10px; background: var(--brand-soft); display: grid; place-items: center; font-size: 21px; margin-bottom: 12px; }
+  .card h3 { margin: 0 0 6px; font-size: 18px; }
+  .card p { margin: 0; color: var(--muted); font-size: 15.5px; }
+  ol.steps { counter-reset: step; list-style: none; padding: 0; margin: 0; display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+  ol.steps li { counter-increment: step; background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 20px 20px 20px 64px; position: relative; }
+  ol.steps li::before { content: counter(step); position: absolute; left: 20px; top: 18px; width: 30px; height: 30px; border-radius: 50%;
+                        background: var(--brand); color: #fff; display: grid; place-items: center; font-weight: 700; }
+  .two { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 18px; align-items: start; }
+  .center { text-align: center; }
+  .center .card { max-width: 720px; margin: 0 auto; padding: 32px; }
+  details { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 14px 18px; margin-bottom: 10px; }
+  summary { cursor: pointer; font-weight: 600; }
+  details p { color: var(--muted); margin: 10px 0 0; }
+  .prose { max-width: 780px; }
+  .prose li { margin: 6px 0; }
+  .prose { overflow-wrap: break-word; }
+  .prose table { border-collapse: collapse; width: 100%; margin: 12px 0; font-size: 15.5px; display: block; overflow-x: auto; }
+  .prose th, .prose td { border: 1px solid var(--line); padding: 8px 10px; text-align: left; vertical-align: top; }
+  form.contact { display: grid; gap: 14px; text-align: left; }
+  form.contact label { display: grid; gap: 6px; font-weight: 600; font-size: 15px; }
+  form.contact input, form.contact select, form.contact textarea {
+    font: inherit; font-weight: 400; padding: 10px 12px; border-radius: 8px; border: 1px solid var(--line); background: var(--bg); color: var(--text); }
+  form.contact textarea { min-height: 150px; resize: vertical; }
+  .trap { position: absolute; left: -10000px; width: 1px; height: 1px; overflow: hidden; }
+  .form-status { font-weight: 600; min-height: 1.5em; }
+  .form-status.ok { color: var(--ok); } .form-status.err { color: var(--err); }
+  footer { border-top: 1px solid var(--line); padding: 28px 0; color: var(--muted); font-size: 14px; }
+  footer .wrap { display: flex; flex-wrap: wrap; gap: 12px 24px; justify-content: space-between; }
+  footer a { color: var(--muted); }
+  code { background: var(--bg-soft); border: 1px solid var(--line); border-radius: 6px; padding: 1px 6px; font-size: .92em; overflow-wrap: anywhere; }
+  [hidden] { display: none !important; }
+  @media (max-width: 720px) { nav a.hide-sm { display: none; } .hero { padding-top: 40px; } section { padding: 48px 0; } }
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="../es/"><img src="../img/icon.png" alt="" width="30" height="30">Virtual Printer</a>
+    <nav aria-label="Menú principal">
+      <a class="hide-sm" href="../es/#features">Funciones</a>
+      <a class="hide-sm" href="../es/traducir/">Traducir</a>
+      <a class="hide-sm" href="../es/#contact">Contacto</a>
+      <a class="lang" href=".././" hreflang="en" lang="en" data-lang-switch="en">EN</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="hero wrap">
+    <img class="logo" src="../img/icon.png" alt="Virtual Printer" width="88" height="88">
+    <h1>Todo lo que imprimes, guardado y fácil de encontrar</h1>
+    <p class="lead">Impresoras virtuales gratuitas para Windows que guardan un historial visual de cada documento PDF y de cada ticket de TPV (ESC/POS), por USB o por red.</p>
+    <div class="buttons">
+      <a class="btn primary" href="../download/1.0.0/VirtualPrinter-1.0.0-setup.exe" data-track="download-installer-1.0.0">⬇ Descargar para Windows</a>
+      <a class="btn coffee" href="https://ko-fi.com/castorad" rel="noopener" target="_blank" data-track="kofi">☕ Invítame a un café</a>
+    </div>
+    <p class="note">Gratis · Windows 10/11 · Se instala sin permisos de administrador · Versión 1.0.0 · 29,7 MB</p>
+    <div class="shot"><img src="../img/screenshot-es.png" width="1280" height="760" alt="Ventana de Virtual Printer: impresoras virtuales, documentos capturados y la vista previa de un ticket"></div>
+  </div>
+
+  <section id="features" class="soft">
+    <div class="wrap">
+      <h2>Qué hace</h2>
+      <p class="sub">Imprime como siempre desde cualquier programa. Virtual Printer captura cada trabajo, guarda el original y lo muestra en un historial con búsqueda.</p>
+      <div class="grid">
+        <div class="card"><div class="ico" aria-hidden="true">🖨️</div><h3>Varias impresoras virtuales</h3><p>Crea las que necesites («Facturas», «Barra», «Cocina»…) y mira casi en tiempo real lo que se imprime en cada una.</p></div>
+        <div class="card"><div class="ico" aria-hidden="true">🧾</div><h3>Tickets de TPV (ESC/POS)</h3><p>Los tickets se dibujan igual que en una impresora térmica: estilos de texto, logos, códigos de barras y QR, en 80 o 58 mm.</p></div>
+        <div class="card"><div class="ico" aria-hidden="true">🌐</div><h3>Por USB o por red</h3><p>Como impresora de Windows para programas que imprimen en impresoras USB, o como impresora de red en el puerto 9100 para TPV que imprimen por IP.</p></div>
+        <div class="card"><div class="ico" aria-hidden="true">🔎</div><h3>Busca dentro de los documentos</h3><p>Encuentra cualquier documento o ticket por su nombre o por su contenido, y filtra por impresora.</p></div>
+        <div class="card"><div class="ico" aria-hidden="true">📄</div><h3>Visor, exportar y reimprimir</h3><p>Todas las páginas con zoom y miniaturas. Exporta el PDF original o reenvía un ticket, idéntico, a una impresora de tickets real.</p></div>
+        <div class="card"><div class="ico" aria-hidden="true">🔔</div><h3>Discreta en la bandeja</h3><p>Se inicia con Windows, vive en la bandeja del sistema y avisa de cada documento nuevo. En español e inglés.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="how">
+    <div class="wrap">
+      <h2>Empieza en tres pasos</h2>
+      <p class="sub">No necesitas instalar nada más.</p>
+      <ol class="steps">
+        <li>Descarga el instalador y ejecútalo. No pide permisos de administrador y añade Virtual Printer al menú Inicio.</li>
+        <li>Pulsa <b>Nueva</b> y elige el tipo: documentos (PDF), tickets en una impresora de Windows o tickets por red.</li>
+        <li>Imprime desde tu programa eligiendo la nueva impresora. El trabajo aparece en el historial en unos segundos.</li>
+      </ol>
+      <p class="note">Windows pide permiso de administrador solo para crear o renombrar impresoras de Windows. Las de red no lo necesitan.</p>
+    </div>
+  </section>
+
+  <section id="translate" class="soft">
+    <div class="wrap two">
+      <div>
+        <h2>Ayuda a traducirla</h2>
+        <p class="sub">Virtual Printer está en inglés y en español. Las traducciones son archivos .po que cualquiera puede editar con Poedit, una herramienta gratuita: no hace falta programar.</p>
+        <div class="buttons" style="justify-content:flex-start">
+          <a class="btn primary" href="../es/traducir/">Guía de traducción</a>
+          <a class="btn secondary" href="../locales/virtual_printer.pot" download data-track="download-template">Descargar la plantilla</a>
+        </div>
+      </div>
+      <div class="card">
+        <h3 style="margin-top:0">Cómo funciona</h3>
+        <p>Abre la plantilla en Poedit, crea tu idioma y traduce. Copia el archivo en <code>%USERPROFILE%\.virtual_printer\locales</code>, reinicia la app y elige tu idioma en Opciones › Idioma para verlo en directo. Después avísanos con el formulario de contacto.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="support" class="center">
+    <div class="wrap">
+      <div class="card">
+        <h2>Gratis, y seguirá siéndolo</h2>
+        <p class="sub" style="margin:0 auto 22px">Virtual Printer es gratuita, sin anuncios ni versión de pago. Si te ahorra tiempo, puedes apoyar su desarrollo con un café.</p>
+        <div class="buttons">
+          <a class="btn coffee" href="https://ko-fi.com/castorad" rel="noopener" target="_blank" data-track="kofi">☕ Invítame a un café</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="soft">
+    <div class="wrap two">
+      <div>
+        <h2>Contacto</h2>
+        <p class="sub">Dudas, problemas, ideas o una traducción que quieras enviar: escríbenos y te responderemos por correo.</p>
+        <p class="note">Solo usamos tus datos para responderte. Consulta la <a href="../es/privacidad/">política de privacidad</a>.</p>
+      </div>
+      <div class="card">
+        <form class="contact" id="contact-form" novalidate>
+          <label>Nombre<input name="name" autocomplete="name" required maxlength="100"></label>
+          <label>Correo electrónico<input name="email" type="email" autocomplete="email" required maxlength="200"></label>
+          <label>Tema
+            <select name="topic">
+              <option value="question">Una duda</option>
+              <option value="problem">Un problema</option>
+              <option value="translation">Una traducción</option>
+              <option value="idea">Una idea o sugerencia</option>
+              <option value="other">Otra cosa</option>
+            </select>
+          </label>
+          <label>Mensaje<textarea name="message" required maxlength="5000"></textarea></label>
+          <!-- Trampa para bots: invisible para las personas, los bots suelen rellenarla -->
+          <div class="trap" aria-hidden="true">
+            <label>Website<input name="website" tabindex="-1" autocomplete="off"></label>
+            <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off">
+          </div>
+          <div class="h-captcha" data-captcha="true"></div>
+          <button class="btn primary" type="submit">Enviar</button>
+          <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq">
+    <div class="wrap">
+      <h2>Preguntas frecuentes</h2>
+      <details><summary>¿De verdad es gratis?</summary><p>Sí. Puedes usarla gratis, en casa o en el trabajo, en todos los equipos que quieras. No tiene anuncios ni versión de pago; las donaciones son voluntarias.</p></details>
+      <details><summary>Windows SmartScreen me avisa al abrir el instalador</summary><p>El instalador aún no está firmado digitalmente. Pulsa «Más información» › «Ejecutar de todas formas».</p></details>
+      <details><summary>¿Con qué programas de TPV funciona?</summary><p>Con cualquier programa que imprima tickets ESC/POS en una impresora de Windows (elige «Generic / Text Only») o en una impresora de red por IP (puerto 9100). Si el programa imprime con gráficos de Windows, usa el driver de tu impresora de tickets (p. ej. POS80).</p></details>
+      <details><summary>¿Dónde se guardan mis documentos?</summary><p>Solo en tu equipo, en <code>%USERPROFILE%\.virtual_printer</code>. La app no envía tus documentos ni datos de uso a ningún sitio.</p></details>
+      <details><summary>¿Qué necesito?</summary><p>Windows 10 u 11 de 64 bits. La característica «Microsoft Print to PDF» para las impresoras de documentos, que Windows trae de serie.</p></details>
+      <details><summary>¿Cómo la desinstalo?</summary><p>Si ya no quieres las impresoras virtuales, elimínalas antes desde la app; después desinstala Virtual Printer desde Configuración › Aplicaciones de Windows. Tus documentos capturados se conservan en tu carpeta de usuario hasta que los borres.</p></details>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Virtual Printer · Uso gratuito · <a href="../LICENSE.txt">Licencia</a> · <a href="../es/privacidad/">Privacidad</a></span>
+    <span><a href="../es/traducir/">Traducir</a> · <a href="../es/#contact">Contacto</a> · <a href="https://ko-fi.com/castorad" rel="noopener" target="_blank" data-track="kofi">Invítame a un café</a></span>
+  </div>
+</footer>
+
+<script>
+  // Recordar el idioma elegido; en la portada inglesa, proponer el español a quien lo usa
+  (function () {
+    function get() { try { return localStorage.getItem("vp-lang"); } catch (e) { return null; } }
+    function set(v) { try { localStorage.setItem("vp-lang", v); } catch (e) { /* sin almacenamiento */ } }
+    document.querySelectorAll("[data-lang-switch]").forEach(a => a.addEventListener("click", () => set(a.dataset.langSwitch)));
+    if ("es" === "en" && "index" === "index" && !get() && (navigator.language || "").toLowerCase().startsWith("es")
+        && !document.referrer.startsWith(location.origin)) {
+      location.replace("../es/");
+    }
+  })();
+
+  // Analítica (GoatCounter: sin cookies ni datos personales). Solo si hay código configurado.
+  const GOATCOUNTER = "";
+  function track(name) {
+    if (window.goatcounter && window.goatcounter.count) {
+      window.goatcounter.count({ path: name, title: name, event: true });
+    }
+  }
+  if (GOATCOUNTER) {
+    const s = document.createElement("script");
+    s.async = true; s.src = "https://gc.zgo.at/count.js";
+    s.dataset.goatcounter = `https://${GOATCOUNTER}.goatcounter.com/count`;
+    document.head.appendChild(s);
+  }
+  document.querySelectorAll("[data-track]").forEach(el => el.addEventListener("click", () => track(el.dataset.track)));
+</script>
+<script>
+  // Formulario de contacto: Web3Forms (reenvía a tu correo sin publicarlo) + tres barreras contra bots:
+  // campo trampa invisible, tiempo mínimo de relleno y hCaptcha (que Web3Forms vuelve a comprobar en su servidor)
+  (function () {
+    const KEY = "";
+    const MIN_SECONDS = 4;
+    const form = document.getElementById("contact-form");
+    const status = document.getElementById("form-status");
+    const button = form.querySelector("button[type=submit]");
+    const loadedAt = Date.now();
+    const text = {
+      sending: "Enviando…", ok: "¡Gracias! Tu mensaje se ha enviado.", error: "No se pudo enviar el mensaje. Inténtalo de nuevo más tarde.",
+      invalid: "Rellena tu nombre, un correo válido y el mensaje.", captcha: "Completa la comprobación anti-spam.", off: "El formulario de contacto todavía no está disponible.",
+    };
+    function show(message, kind) { status.textContent = message; status.className = "form-status " + (kind || ""); }
+
+    if (!KEY) {
+      form.querySelectorAll("input, select, textarea, button").forEach(el => el.disabled = true);
+      show(text.off);
+      return;
+    }
+    const captcha = document.createElement("script");
+    captcha.src = "https://web3forms.com/client/script.js"; captcha.async = true; captcha.defer = true;
+    document.head.appendChild(captcha);
+
+    form.addEventListener("submit", async (event) => {
+      event.preventDefault();
+      const data = new FormData(form);
+      // Un bot que rellena el campo trampa o envía en un instante recibe un "enviado" falso
+      if (data.get("website") || data.get("botcheck") || (Date.now() - loadedAt) / 1000 < MIN_SECONDS) {
+        show(text.ok, "ok"); form.reset(); return;
+      }
+      if (!form.checkValidity() || !String(data.get("message") || "").trim()) { show(text.invalid, "err"); return; }
+      if (!data.get("h-captcha-response")) { show(text.captcha, "err"); return; }
+
+      const topic = form.topic.options[form.topic.selectedIndex].text;
+      data.delete("website");
+      data.append("access_key", KEY);
+      data.append("subject", `[Virtual Printer] ${topic}`);
+      data.append("from_name", "Virtual Printer web");
+      data.append("language", "es");
+      button.disabled = true; show(text.sending);
+      try {
+        const response = await fetch("https://api.web3forms.com/submit", { method: "POST", body: data });
+        const result = await response.json();
+        if (result.success) {
+          show(text.ok, "ok"); form.reset(); track("contact-sent");
+        } else {
+          show(text.error, "err");
+        }
+      } catch (e) {
+        show(text.error, "err");
+      } finally {
+        button.disabled = false;
+        if (window.hcaptcha) { try { window.hcaptcha.reset(); } catch (e) { /* sin captcha cargado */ } }
+      }
+    });
+  })();
+</script>
+
+</body>
+</html>
