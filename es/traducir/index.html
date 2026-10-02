@@ -186,7 +186,7 @@
   })();
 
   // Analítica (GoatCounter: sin cookies ni datos personales). Solo si hay código configurado.
-  const GOATCOUNTER = "";
+  const GOATCOUNTER = "virtualprinter";
   function track(name) {
     if (window.goatcounter && window.goatcounter.count) {
       window.goatcounter.count({ path: name, title: name, event: true });
