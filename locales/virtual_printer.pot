@@ -1,0 +1,659 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Virtual Printer 1.0.0\n"
+"Report-Msgid-Bugs-To: https://github.com/castoragra/virtual-printer-web/issues\n"
+"POT-Creation-Date: 2026-10-01 14:01+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#, python-brace-format
+msgid "About {app}"
+msgstr ""
+
+#, python-brace-format
+msgid "Version <b>{version}</b>"
+msgstr ""
+
+msgid "Free to use."
+msgstr ""
+
+msgid "Website"
+msgstr ""
+
+msgid "Help translate it"
+msgstr ""
+
+msgid "Data:"
+msgstr ""
+
+msgid "Buy me a coffee"
+msgstr ""
+
+msgid "The app is free; if it is useful to you, you can support its development"
+msgstr ""
+
+msgid "Licenses"
+msgstr ""
+
+msgid "Open data folder"
+msgstr ""
+
+#. THIRD_PARTY_NOTICES.txt is generated when building the executable
+#, python-brace-format
+msgid "({file} is generated when the executable is built)"
+msgstr ""
+
+msgid "Open licenses folder"
+msgstr ""
+
+msgid "The file was not fully written in time"
+msgstr ""
+
+msgid "receipt"
+msgstr ""
+
+msgid "The pages could not be extracted (damaged PDF?)"
+msgstr ""
+
+#, python-brace-format
+msgid "Print {date}"
+msgstr ""
+
+msgid "Receipt"
+msgstr ""
+
+#, python-brace-format
+msgid "({n} receipt)"
+msgid_plural "({n} receipts)"
+msgstr[0] ""
+msgstr[1] ""
+
+#, python-brace-format
+msgid "Barcode: {data}"
+msgstr ""
+
+msgid "Cash drawer opened"
+msgstr ""
+
+#, python-brace-format
+msgid "{code} code not supported"
+msgstr ""
+
+#, python-brace-format
+msgid "Logo stored in the printer ({key})"
+msgstr ""
+
+#, python-brace-format
+msgid "Logo stored in the printer (no. {n})"
+msgstr ""
+
+msgid "Job with no printable content"
+msgstr ""
+
+msgid "Printing could not be started"
+msgstr ""
+
+msgid "Print receipt"
+msgid_plural "Print receipts"
+msgstr[0] ""
+msgstr[1] ""
+
+msgid "Resend the original receipt (ESC/POS) to a receipt printer:"
+msgstr ""
+
+msgid ""
+"It prints exactly as from the POS, with paper cuts and cash drawer opening. Send it only to "
+"receipt printers: a regular printer would print meaningless symbols."
+msgstr ""
+
+msgid "Print as a document on any printer…"
+msgstr ""
+
+#, python-brace-format
+msgid "{n} receipt resent to {printer}"
+msgid_plural "{n} receipts resent to {printer}"
+msgstr[0] ""
+msgstr[1] ""
+
+msgid "The original PDF is missing for:"
+msgstr ""
+
+#, python-brace-format
+msgid "{n} document"
+msgid_plural "{n} documents"
+msgstr[0] ""
+msgstr[1] ""
+
+msgid "Print"
+msgstr ""
+
+#, python-brace-format
+msgid "Sent to {printer}"
+msgstr ""
+
+msgid "Original ESC/POS receipt"
+msgstr ""
+
+msgid "Receipt text"
+msgstr ""
+
+msgid "Export"
+msgstr ""
+
+#, python-brace-format
+msgid "Exported: {path}"
+msgstr ""
+
+#, python-brace-format
+msgid "Export {n} document to…"
+msgid_plural "Export {n} documents to…"
+msgstr[0] ""
+msgstr[1] ""
+
+#, python-brace-format
+msgid "{n} document exported to {folder}"
+msgid_plural "{n} documents exported to {folder}"
+msgstr[0] ""
+msgstr[1] ""
+
+#, python-brace-format
+msgid "“{name}” could not be exported"
+msgstr ""
+
+msgid "Document"
+msgstr ""
+
+msgid "Printer"
+msgstr ""
+
+msgid "Date"
+msgstr ""
+
+msgid "Pages"
+msgstr ""
+
+msgid "Size"
+msgstr ""
+
+#, python-brace-format
+msgid "Today {time}"
+msgstr ""
+
+#, python-brace-format
+msgid "Yesterday {time}"
+msgstr ""
+
+msgid "Documents"
+msgstr ""
+
+msgid "Search by name or content…"
+msgstr ""
+
+msgid "Print (Ctrl+P)"
+msgstr ""
+
+msgid "Save as PDF, original receipt or text (Ctrl+S)"
+msgstr ""
+
+msgid "Folder"
+msgstr ""
+
+msgid "Open the folder with the job's files"
+msgstr ""
+
+msgid "Delete"
+msgstr ""
+
+msgid "Delete from history (Del)"
+msgstr ""
+
+#, python-brace-format
+msgid "Documents ({n})"
+msgstr ""
+
+msgid "No results for the search"
+msgstr ""
+
+msgid ""
+"No documents yet.\n"
+"Print to one of the virtual printers and they will appear here."
+msgstr ""
+
+#, python-brace-format
+msgid "{n} selected"
+msgid_plural "{n} selected"
+msgstr[0] ""
+msgstr[1] ""
+
+msgid "Could not print:"
+msgstr ""
+
+msgid "Could not export:"
+msgstr ""
+
+msgid "Text copied"
+msgstr ""
+
+msgid "These documents have no text"
+msgstr ""
+
+#, python-brace-format
+msgid "Delete “{name}” from the history?"
+msgstr ""
+
+#, python-brace-format
+msgid "Delete {n} document from the history?"
+msgid_plural "Delete {n} documents from the history?"
+msgstr[0] ""
+msgstr[1] ""
+
+msgid "Their files are deleted too."
+msgstr ""
+
+#, python-brace-format
+msgid "{n} document deleted"
+msgid_plural "{n} documents deleted"
+msgstr[0] ""
+msgstr[1] ""
+
+msgid "Open in a large window"
+msgstr ""
+
+msgid "Print…"
+msgstr ""
+
+msgid "Export…"
+msgstr ""
+
+msgid "Copy text"
+msgstr ""
+
+msgid "Open folder"
+msgstr ""
+
+#, python-brace-format
+msgid "Port {port} not available: {error}"
+msgstr ""
+
+msgid "Previous page"
+msgstr ""
+
+msgid "Next page"
+msgstr ""
+
+msgid "Zoom out (Ctrl + -, Ctrl + wheel)"
+msgstr ""
+
+msgid "Zoom in (Ctrl + +, Ctrl + wheel)"
+msgstr ""
+
+msgid "Actual size (Ctrl + 0)"
+msgstr ""
+
+msgid "Fit width"
+msgstr ""
+
+msgid "Whole page"
+msgstr ""
+
+msgid "Show/hide thumbnails"
+msgstr ""
+
+msgid "Open in a large window (or double-click in the table)"
+msgstr ""
+
+msgid "Select a job to see its pages"
+msgstr ""
+
+msgid "This job has no pages"
+msgstr ""
+
+msgid "Error displaying the page"
+msgstr ""
+
+msgid "Printers"
+msgstr ""
+
+msgid "New"
+msgstr ""
+
+msgid "Create a virtual printer (asks for administrator permission)"
+msgstr ""
+
+msgid "Edit"
+msgstr ""
+
+msgid "Name, driver, paper or port (also with a double-click)"
+msgstr ""
+
+msgid "Deletes the printer from Windows; its history is kept"
+msgstr ""
+
+#, python-brace-format
+msgid "{name} (deleted)"
+msgstr ""
+
+msgid "Error"
+msgstr ""
+
+msgid "Receiving…"
+msgstr ""
+
+#, python-brace-format
+msgid "Receiving from {address}…"
+msgstr ""
+
+#, python-brace-format
+msgid "Processing “{name}” {page}/{total}"
+msgstr ""
+
+#, python-brace-format
+msgid "{n} page"
+msgid_plural "{n} pages"
+msgstr[0] ""
+msgstr[1] ""
+
+#, python-brace-format
+msgid "(+{n} queued)"
+msgstr ""
+
+msgid "No jobs"
+msgstr ""
+
+#, python-brace-format
+msgid "Last: {name} · {when}"
+msgstr ""
+
+msgid "receipts"
+msgstr ""
+
+msgid "The printer no longer exists; its history is kept"
+msgstr ""
+
+msgid "No printer"
+msgstr ""
+
+msgid "Jobs from earlier versions or PDFs dropped manually into spool_output"
+msgstr ""
+
+#, python-brace-format
+msgid "{n} printing"
+msgid_plural "{n} printing"
+msgstr[0] ""
+msgstr[1] ""
+
+#, python-brace-format
+msgid "{n} printer"
+msgid_plural "{n} printers"
+msgstr[0] ""
+msgstr[1] ""
+
+msgid "The whole history"
+msgstr ""
+
+msgid "All"
+msgstr ""
+
+#, python-brace-format
+msgid "Creating “{name}”"
+msgstr ""
+
+#, python-brace-format
+msgid "Saving “{name}”"
+msgstr ""
+
+#, python-brace-format
+msgid "Delete the printer “{name}” from the app?"
+msgstr ""
+
+#, python-brace-format
+msgid "Delete the printer “{name}” from Windows?"
+msgstr ""
+
+msgid "Delete printer"
+msgstr ""
+
+msgid "Jobs already captured are kept in the history."
+msgstr ""
+
+#, python-brace-format
+msgid "Deleting “{name}”"
+msgstr ""
+
+msgid "waiting for administrator permission…"
+msgstr ""
+
+msgid "saving…"
+msgstr ""
+
+msgid "Printers updated"
+msgstr ""
+
+msgid "Edit printer"
+msgstr ""
+
+msgid "New virtual printer"
+msgstr ""
+
+msgid "Name:"
+msgstr ""
+
+msgid "Type:"
+msgstr ""
+
+msgid "Driver:"
+msgstr ""
+
+msgid ""
+"<b>Generic / Text Only</b>: the program sends ESC/POS directly (EasyPOS and most POS "
+"software).<br><b>Your printer's driver</b> (e.g. POS80): if the program prints with Windows "
+"graphics; this keeps logos and fonts."
+msgstr ""
+
+msgid "Paper:"
+msgstr ""
+
+msgid "TCP port:"
+msgstr ""
+
+msgid "Accept connections from other computers on the network"
+msgstr ""
+
+msgid "Save"
+msgstr ""
+
+msgid "Create"
+msgstr ""
+
+msgid "The type cannot be changed: create a new printer of another type"
+msgstr ""
+
+msgid "Windows will ask for administrator permission to create the printer."
+msgstr ""
+
+msgid "Changing the name or the driver asks for administrator permission."
+msgstr ""
+
+msgid "(this computer's IP)"
+msgstr ""
+
+#, python-brace-format
+msgid ""
+"Set up the POS to print to <b>{addresses}</b> (or 127.0.0.1:{port} from this computer). The first "
+"time, Windows may ask for permission in the firewall."
+msgstr ""
+
+#, python-brace-format
+msgid "Only from this computer: <b>127.0.0.1:{port}</b>"
+msgstr ""
+
+#, python-brace-format
+msgid "Port {port} is already used by another network printer"
+msgstr ""
+
+#, python-brace-format
+msgid "Port {port} is in use by another program"
+msgstr ""
+
+msgid "Documents (PDF)"
+msgstr ""
+
+msgid "Receipts (Windows printer)"
+msgstr ""
+
+msgid "Receipts over network (IP)"
+msgstr ""
+
+#, python-brace-format
+msgid "paper {mm} mm"
+msgstr ""
+
+msgid "local network"
+msgstr ""
+
+msgid "this computer only"
+msgstr ""
+
+#, python-brace-format
+msgid "port {port} ({scope})"
+msgstr ""
+
+msgid "Paused"
+msgstr ""
+
+msgid "Cancelling"
+msgstr ""
+
+msgid "Receiving"
+msgstr ""
+
+msgid "Printing"
+msgstr ""
+
+msgid "Printed"
+msgstr ""
+
+msgid "(untitled)"
+msgstr ""
+
+msgid "Queued"
+msgstr ""
+
+msgid "The name cannot be empty"
+msgstr ""
+
+msgid "The name is too long (100 characters at most)"
+msgstr ""
+
+#, python-brace-format
+msgid "The name cannot contain: {characters}"
+msgstr ""
+
+msgid "A printer with that name already exists"
+msgstr ""
+
+msgid "Cancelled: administrator permission is required"
+msgstr ""
+
+#, python-brace-format
+msgid "The script ended with code {code}"
+msgstr ""
+
+#, python-brace-format
+msgid ""
+"Driver “{driver}” not found. Install it, or enable “Microsoft Print to PDF” in Windows features."
+msgstr ""
+
+msgid "Waiting for print jobs…"
+msgstr ""
+
+msgid "&File"
+msgstr ""
+
+msgid "Quit"
+msgstr ""
+
+msgid "&Documents"
+msgstr ""
+
+msgid "&Printers"
+msgstr ""
+
+msgid "New…"
+msgstr ""
+
+msgid "Edit…"
+msgstr ""
+
+msgid "&Options"
+msgstr ""
+
+msgid "&Help"
+msgstr ""
+
+msgid "Language"
+msgstr ""
+
+msgid "Automatic (Windows language)"
+msgstr ""
+
+msgid "Help translate it…"
+msgstr ""
+
+msgid "The language will change when the app restarts. Restart now?"
+msgstr ""
+
+msgid "Start with Windows"
+msgstr ""
+
+msgid "Notify about each new document"
+msgstr ""
+
+msgid "Show"
+msgstr ""
+
+msgid "New printer…"
+msgstr ""
+
+#, python-brace-format
+msgid "{app} is still running"
+msgstr ""
+
+msgid "It keeps capturing in the background. Open it from this tray icon."
+msgstr ""
+
+#, python-brace-format
+msgid "Printing on {n} printer"
+msgid_plural "Printing on {n} printers"
+msgstr[0] ""
+msgstr[1] ""
+
+#, python-brace-format
+msgid "Document captured: {detail}"
+msgstr ""
+
+msgid "Document captured"
+msgstr ""
+
+#, python-brace-format
+msgid "Error with {name}: {error}"
+msgstr ""
+
+msgid "job"
+msgstr ""
+
+msgid "It will start with Windows, in the tray"
+msgstr ""
+
+msgid "It will no longer start with Windows"
+msgstr ""
+
+#, python-brace-format
+msgid "Could not change starting with Windows: {error}"
+msgstr ""
+
+msgid ""
+"Visual history of everything you print: PDF documents and ESC/POS receipts over USB or network."
+msgstr ""

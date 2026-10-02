@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Virtual Printer — free print history for Windows</title>
+<meta name="description" content="Free Windows app that keeps a visual history of everything you print: PDF documents and ESC/POS receipts over USB or network.">
+<meta name="robots" content="index, follow">
+<link rel="icon" type="image/png" href="img/favicon.png">
+<meta property="og:title" content="Virtual Printer">
+<meta property="og:description" content="Free print history for Windows: PDF documents and POS receipts (ESC/POS) over USB or network.">
+<meta property="og:image" content="img/screenshot-en.png">
+<style>
+  :root {
+    --bg: #ffffff; --bg-soft: #f4f7fb; --text: #0f172a; --muted: #52607a; --line: #e2e8f0;
+    --brand: #2563eb; --brand-dark: #1d4ed8; --brand-soft: #dbeafe; --card: #ffffff; --shadow: 0 10px 30px rgba(15, 23, 42, .08);
+    --coffee: #ff5e5b;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #0b1120; --bg-soft: #111a2e; --text: #e5edf8; --muted: #9aa8c0; --line: #1f2b45;
+            --brand: #4f8cff; --brand-dark: #3b7cf5; --brand-soft: #172a4f; --card: #121c31; --shadow: 0 10px 30px rgba(0, 0, 0, .35); }
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background: var(--bg); color: var(--text); font: 17px/1.6 "Segoe UI", system-ui, -apple-system, Roboto, sans-serif; }
+  a { color: var(--brand); }
+  .wrap { max-width: 1120px; margin: 0 auto; padding: 0 20px; }
+  header.top { position: sticky; top: 0; z-index: 10; background: color-mix(in srgb, var(--bg) 88%, transparent);
+               backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); }
+  header.top .wrap { display: flex; align-items: center; gap: 16px; height: 60px; }
+  .brand { display: flex; align-items: center; gap: 10px; font-weight: 700; color: var(--text); text-decoration: none; font-size: 18px; }
+  .brand img { width: 30px; height: 30px; }
+  nav { margin-left: auto; display: flex; align-items: center; gap: 18px; font-size: 15px; }
+  nav a { color: var(--muted); text-decoration: none; }
+  nav a:hover { color: var(--text); }
+  .lang-toggle { border: 1px solid var(--line); background: var(--card); color: var(--text); border-radius: 8px;
+                 padding: 4px 10px; font: inherit; font-size: 14px; cursor: pointer; }
+  .hero { padding: 64px 0 32px; text-align: center; }
+  .hero img.logo { width: 88px; height: 88px; }
+  .hero h1 { font-size: clamp(32px, 5vw, 52px); line-height: 1.15; margin: 16px 0 12px; letter-spacing: -.02em; }
+  .hero p.lead { font-size: clamp(18px, 2.2vw, 21px); color: var(--muted); max-width: 720px; margin: 0 auto 28px; }
+  .buttons { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
+  .btn { display: inline-flex; align-items: center; gap: 8px; padding: 12px 22px; border-radius: 10px; font-weight: 600;
+         text-decoration: none; border: 1px solid transparent; font-size: 16px; }
+  .btn.primary { background: var(--brand); color: #fff; }
+  .btn.primary:hover { background: var(--brand-dark); }
+  .btn.secondary { border-color: var(--line); color: var(--text); background: var(--card); }
+  .btn.coffee { background: var(--coffee); color: #fff; }
+  .note { color: var(--muted); font-size: 14px; margin-top: 14px; }
+  .shot { margin: 40px auto 0; max-width: 1040px; border-radius: 12px; overflow: hidden; border: 1px solid var(--line); box-shadow: var(--shadow); }
+  .shot img { display: block; width: 100%; height: auto; }
+  section { padding: 64px 0; }
+  section.soft { background: var(--bg-soft); }
+  h2 { font-size: clamp(26px, 3.4vw, 34px); margin: 0 0 12px; letter-spacing: -.01em; }
+  .sub { color: var(--muted); margin: 0 0 32px; max-width: 760px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 18px; }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 22px; }
+  .card .ico { width: 40px; height: 40px; border-radius: 10px; background: var(--brand-soft); display: grid; place-items: center; font-size: 21px; margin-bottom: 12px; }
+  .card h3 { margin: 0 0 6px; font-size: 18px; }
+  .card p { margin: 0; color: var(--muted); font-size: 15.5px; }
+  ol.steps { counter-reset: step; list-style: none; padding: 0; margin: 0; display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+  ol.steps li { counter-increment: step; background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 20px 20px 20px 64px; position: relative; }
+  ol.steps li::before { content: counter(step); position: absolute; left: 20px; top: 18px; width: 30px; height: 30px; border-radius: 50%;
+                        background: var(--brand); color: #fff; display: grid; place-items: center; font-weight: 700; }
+  .two { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 18px; }
+  .support { text-align: center; }
+  .support .card { max-width: 720px; margin: 0 auto; padding: 32px; }
+  details { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 14px 18px; margin-bottom: 10px; }
+  summary { cursor: pointer; font-weight: 600; }
+  details p { color: var(--muted); margin: 10px 0 0; }
+  footer { border-top: 1px solid var(--line); padding: 28px 0; color: var(--muted); font-size: 14px; }
+  footer .wrap { display: flex; flex-wrap: wrap; gap: 12px 24px; justify-content: space-between; }
+  code { background: var(--bg-soft); border: 1px solid var(--line); border-radius: 6px; padding: 1px 6px; font-size: .92em; }
+  [hidden] { display: none !important; }
+  @media (max-width: 720px) { nav a.hide-sm { display: none; } .hero { padding-top: 40px; } section { padding: 48px 0; } }
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#"><img src="img/icon.png" alt="">Virtual Printer</a>
+    <nav>
+      <a class="hide-sm" href="#features" data-t="nav_features">Features</a>
+      <a class="hide-sm" href="#translate" data-t="nav_translate">Translate</a>
+      <a class="hide-sm" href="#faq" data-t="nav_faq">FAQ</a>
+      <a class="hide-sm" href="https://ko-fi.com/castorad" target="_blank" rel="noopener">Ko-fi</a>
+      <button class="lang-toggle" id="lang-toggle" type="button" aria-label="Language">ES</button>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="hero wrap">
+    <img class="logo" src="img/icon.png" alt="Virtual Printer">
+    <h1 data-t="hero_title">Everything you print, saved and searchable</h1>
+    <p class="lead" data-t="hero_lead">Free virtual printers for Windows that keep a visual history of every PDF document and POS receipt (ESC/POS) — over USB or over the network.</p>
+    <div class="buttons">
+      <a class="btn primary" id="download" href="download/1.0.0/VirtualPrinter-1.0.0-setup.exe">
+        <span>⬇</span><span data-t="download">Download for Windows</span></a>
+      <a class="btn coffee donate-link" href="#" hidden>☕ <span data-t="donate_short">Buy me a coffee</span></a>
+    </div>
+    <p class="note" data-t="hero_note">Free · Windows 10/11 · Installs without administrator rights</p>
+    <div class="shot"><img id="screenshot" src="img/screenshot-en.png" width="1280" height="760"
+         alt="Virtual Printer window: printers, captured documents and a receipt preview"></div>
+  </div>
+
+  <section id="features" class="soft">
+    <div class="wrap">
+      <h2 data-t="features_title">What it does</h2>
+      <p class="sub" data-t="features_sub">Print as usual from any program. Virtual Printer captures each job, keeps the original and shows it in a searchable history.</p>
+      <div class="grid">
+        <div class="card"><div class="ico">🖨️</div><h3 data-t="f1_t">Several virtual printers</h3>
+          <p data-t="f1_d">Create as many as you need (“Invoices”, “Bar”, “Kitchen”…) and see what each one is printing almost in real time.</p></div>
+        <div class="card"><div class="ico">🧾</div><h3 data-t="f2_t">POS receipts (ESC/POS)</h3>
+          <p data-t="f2_d">Receipts are drawn exactly as a thermal printer would: text styles, logos, barcodes and QR codes, 80 or 58 mm.</p></div>
+        <div class="card"><div class="ico">🌐</div><h3 data-t="f3_t">USB or network</h3>
+          <p data-t="f3_d">As a Windows printer for programs that print to USB printers, or as a network printer on port 9100 for POS systems that print by IP.</p></div>
+        <div class="card"><div class="ico">🔎</div><h3 data-t="f4_t">Search inside documents</h3>
+          <p data-t="f4_d">Find any document or receipt by its name or by its content, and filter by printer.</p></div>
+        <div class="card"><div class="ico">📄</div><h3 data-t="f5_t">Viewer, export and reprint</h3>
+          <p data-t="f5_d">All pages with zoom and thumbnails. Export the original PDF, or resend a receipt byte for byte to a real receipt printer.</p></div>
+        <div class="card"><div class="ico">🔔</div><h3 data-t="f6_t">Quiet in the tray</h3>
+          <p data-t="f6_d">Starts with Windows, lives in the system tray and notifies you of each new document. Several languages.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="how">
+    <div class="wrap">
+      <h2 data-t="how_title">Start in three steps</h2>
+      <p class="sub" data-t="how_sub">Nothing else to install.</p>
+      <ol class="steps">
+        <li data-t="s1">Download the installer and run it. It needs no administrator rights and adds Virtual Printer to the Start menu.</li>
+        <li data-t="s2">Click <b>New</b> and choose the type: documents (PDF), receipts on a Windows printer or receipts over the network.</li>
+        <li data-t="s3">Print from your program choosing the new printer. The job appears in the history within seconds.</li>
+      </ol>
+      <p class="note" data-t="how_note">Windows asks for administrator permission only to create or rename Windows printers. Network printers do not need it.</p>
+    </div>
+  </section>
+
+  <section id="translate" class="soft">
+    <div class="wrap two">
+      <div>
+        <h2 data-t="tr_title">Help translate it</h2>
+        <p class="sub" data-t="tr_sub">Virtual Printer is available in English and Spanish. Translations are plain .po files that anyone can edit with the free Poedit tool — no programming needed.</p>
+        <div class="buttons" style="justify-content:flex-start">
+          <a class="btn primary" href="https://github.com/castoragra/virtual-printer-web/blob/main/TRANSLATING.md" data-t="tr_guide">Translation guide</a>
+          <a class="btn secondary" href="locales/virtual_printer.pot" download data-t="tr_template">Download the template</a>
+        </div>
+      </div>
+      <div class="card">
+        <h3 data-t="tr_how">How it works</h3>
+        <p data-t="tr_steps">Open the template in Poedit, create your language and translate. Copy the file to <code>%USERPROFILE%\.virtual_printer\locales</code>, restart the app and pick your language in Options › Language to see it live. Then send it as a pull request or attach it to an issue.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="support" class="support">
+    <div class="wrap">
+      <div class="card">
+        <h2 data-t="support_title">Free, and it will stay free</h2>
+        <p class="sub" style="margin:0 auto 22px" data-t="support_sub">Virtual Printer is free, with no ads and no paid version. If it saves you time, you can support its development with a coffee.</p>
+        <div class="buttons">
+          <a class="btn coffee donate-link" href="#" hidden>☕ <span data-t="donate">Buy me a coffee</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq" class="soft">
+    <div class="wrap">
+      <h2 data-t="faq_title">Frequently asked questions</h2>
+      <details><summary data-t="q1">Is it really free?</summary>
+        <p data-t="a1">Yes. You can use it for free, at home or at work, on as many computers as you like. There are no ads and no paid version; donations are voluntary.</p></details>
+      <details><summary data-t="q2">Windows SmartScreen warns me when I open it</summary>
+        <p data-t="a2">The executable is not digitally signed yet. Click “More info” › “Run anyway”.</p></details>
+      <details><summary data-t="q3">Which POS programs does it work with?</summary>
+        <p data-t="a3">With any program that prints ESC/POS receipts to a Windows printer (choose “Generic / Text Only”) or to a network printer by IP (port 9100). If the program prints with Windows graphics, use your receipt printer’s driver (e.g. POS80) instead.</p></details>
+      <details><summary data-t="q4">Where are my documents stored?</summary>
+        <p data-t="a4">Only on your computer, in <code>%USERPROFILE%\.virtual_printer</code>. Nothing is uploaded anywhere.</p></details>
+      <details><summary data-t="q5">What do I need?</summary>
+        <p data-t="a5">Windows 10 or 11 (64-bit). The “Microsoft Print to PDF” feature for document printers, which Windows includes by default.</p></details>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Virtual Printer · <span data-t="license">Free to use</span> · <a href="LICENSE.txt" data-t="license_link">License</a></span>
+    <span><a href="#translate" data-t="nav_translate">Translate</a> · <a class="donate-link" href="#" hidden data-t="donate_short">Buy me a coffee</a></span>
+  </div>
+</footer>
+
+<script>
+  // Enlace de donación: pon aquí tu página (Ko-fi, Buy Me a Coffee…). Vacío = no se muestran los botones.
+  const DONATE_URL = "https://ko-fi.com/castorad";
+
+  const ES = {
+    nav_features: "Funciones", nav_translate: "Traducir", nav_faq: "Preguntas",
+    hero_title: "Todo lo que imprimes, guardado y fácil de encontrar",
+    hero_lead: "Impresoras virtuales gratuitas para Windows que guardan un historial visual de cada documento PDF y de cada ticket de TPV (ESC/POS), por USB o por red.",
+    download: "Descargar para Windows", donate_short: "Invítame a un café", donate: "Invítame a un café",
+    hero_note: "Gratis · Windows 10/11 · Se instala sin permisos de administrador",
+    features_title: "Qué hace",
+    features_sub: "Imprime como siempre desde cualquier programa. Virtual Printer captura cada trabajo, guarda el original y lo muestra en un historial con búsqueda.",
+    f1_t: "Varias impresoras virtuales", f1_d: "Crea las que necesites («Facturas», «Barra», «Cocina»…) y mira casi en tiempo real lo que se imprime en cada una.",
+    f2_t: "Tickets de TPV (ESC/POS)", f2_d: "Los tickets se dibujan igual que en una impresora térmica: estilos de texto, logos, códigos de barras y QR, en 80 o 58 mm.",
+    f3_t: "Por USB o por red", f3_d: "Como impresora de Windows para programas que imprimen en impresoras USB, o como impresora de red en el puerto 9100 para TPV que imprimen por IP.",
+    f4_t: "Busca dentro de los documentos", f4_d: "Encuentra cualquier documento o ticket por su nombre o por su contenido, y filtra por impresora.",
+    f5_t: "Visor, exportar y reimprimir", f5_d: "Todas las páginas con zoom y miniaturas. Exporta el PDF original o reenvía un ticket, idéntico, a una impresora de tickets real.",
+    f6_t: "Discreta en la bandeja", f6_d: "Se inicia con Windows, vive en la bandeja del sistema y avisa de cada documento nuevo. En varios idiomas.",
+    how_title: "Empieza en tres pasos", how_sub: "No necesitas instalar nada más.",
+    s1: "Descarga el instalador y ejecútalo. No pide permisos de administrador y añade Virtual Printer al menú Inicio.",
+    s2: "Pulsa <b>Nueva</b> y elige el tipo: documentos (PDF), tickets en una impresora de Windows o tickets por red.",
+    s3: "Imprime desde tu programa eligiendo la nueva impresora. El trabajo aparece en el historial en unos segundos.",
+    how_note: "Windows pide permiso de administrador solo para crear o renombrar impresoras de Windows. Las de red no lo necesitan.",
+    tr_title: "Ayuda a traducirla",
+    tr_sub: "Virtual Printer está en inglés y en español. Las traducciones son archivos .po que cualquiera puede editar con Poedit, una herramienta gratuita: no hace falta programar.",
+    tr_guide: "Guía de traducción", tr_template: "Descargar la plantilla", tr_how: "Cómo funciona",
+    tr_steps: "Abre la plantilla en Poedit, crea tu idioma y traduce. Copia el archivo en <code>%USERPROFILE%\\.virtual_printer\\locales</code>, reinicia la app y elige tu idioma en Opciones › Idioma para verlo en directo. Después envíalo como pull request o adjúntalo en una incidencia.",
+    support_title: "Gratis, y seguirá siéndolo",
+    support_sub: "Virtual Printer es gratuita, sin anuncios ni versión de pago. Si te ahorra tiempo, puedes apoyar su desarrollo con un café.",
+    faq_title: "Preguntas frecuentes",
+    q1: "¿De verdad es gratis?", a1: "Sí. Puedes usarla gratis, en casa o en el trabajo, en todos los equipos que quieras. No tiene anuncios ni versión de pago; las donaciones son voluntarias.",
+    q2: "Windows SmartScreen me avisa al abrirlo", a2: "El ejecutable aún no está firmado digitalmente. Pulsa «Más información» › «Ejecutar de todas formas».",
+    q3: "¿Con qué programas de TPV funciona?", a3: "Con cualquier programa que imprima tickets ESC/POS en una impresora de Windows (elige «Generic / Text Only») o en una impresora de red por IP (puerto 9100). Si el programa imprime con gráficos de Windows, usa el driver de tu impresora de tickets (p. ej. POS80).",
+    q4: "¿Dónde se guardan mis documentos?", a4: "Solo en tu equipo, en <code>%USERPROFILE%\\.virtual_printer</code>. No se sube nada a ningún sitio.",
+    q5: "¿Qué necesito?", a5: "Windows 10 u 11 de 64 bits. La característica «Microsoft Print to PDF» para las impresoras de documentos, que Windows trae de serie.",
+    license: "Uso gratuito", license_link: "Licencia",
+  };
+  const original = {};
+  document.querySelectorAll("[data-t]").forEach(el => original[el.dataset.t] = el.innerHTML);
+
+  function storedLanguage() {
+    try { return localStorage.getItem("vp-lang"); } catch (e) { return null; }
+  }
+  function setLanguage(lang) {
+    document.documentElement.lang = lang;
+    document.querySelectorAll("[data-t]").forEach(el => {
+      el.innerHTML = lang === "es" ? (ES[el.dataset.t] ?? original[el.dataset.t]) : original[el.dataset.t];
+    });
+    document.getElementById("screenshot").src = `img/screenshot-${lang}.png`;
+    document.getElementById("lang-toggle").textContent = lang === "es" ? "EN" : "ES";
+    document.title = lang === "es" ? "Virtual Printer — historial de impresión gratuito para Windows"
+                                   : "Virtual Printer — free print history for Windows";
+    try { localStorage.setItem("vp-lang", lang); } catch (e) { /* sin almacenamiento: no pasa nada */ }
+  }
+  document.getElementById("lang-toggle").addEventListener("click", () =>
+    setLanguage(document.documentElement.lang === "es" ? "en" : "es"));
+  setLanguage(storedLanguage() || ((navigator.language || "en").toLowerCase().startsWith("es") ? "es" : "en"));
+
+  if (DONATE_URL) {
+    document.querySelectorAll(".donate-link").forEach(a => { a.href = DONATE_URL; a.hidden = false; a.target = "_blank"; a.rel = "noopener"; });
+  }
+</script>
+</body>
+</html>

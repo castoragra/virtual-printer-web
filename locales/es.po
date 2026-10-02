@@ -1,0 +1,677 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Virtual Printer 1.0.0\n"
+"Report-Msgid-Bugs-To: https://github.com/castoragra/virtual-printer-web/issues\n"
+"POT-Creation-Date: 2026-10-01 14:01+0000\n"
+"PO-Revision-Date: 2026-10-01 12:30+0000\n"
+"Last-Translator: Virtual Printer\n"
+"Language-Team: Español\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Native-Language-Name: Español\n"
+
+#, python-brace-format
+msgid "About {app}"
+msgstr "Acerca de {app}"
+
+#, python-brace-format
+msgid "Version <b>{version}</b>"
+msgstr "Versión <b>{version}</b>"
+
+msgid "Website"
+msgstr "Sitio web"
+
+msgid "Help translate it"
+msgstr "Ayuda a traducirla"
+
+msgid "Data:"
+msgstr "Datos:"
+
+msgid "Buy me a coffee"
+msgstr "Invítame a un café"
+
+msgid "The app is free; if it is useful to you, you can support its development"
+msgstr "La app es gratuita; si te resulta útil, puedes apoyar su desarrollo"
+
+msgid "Open data folder"
+msgstr "Abrir carpeta de datos"
+
+msgid "The file was not fully written in time"
+msgstr "El archivo no terminó de escribirse a tiempo"
+
+msgid "receipt"
+msgstr "ticket"
+
+msgid "The pages could not be extracted (damaged PDF?)"
+msgstr "No se pudieron extraer las páginas (¿PDF dañado?)"
+
+#, python-brace-format
+msgid "Print {date}"
+msgstr "Impresión {date}"
+
+msgid "Receipt"
+msgstr "Ticket"
+
+#, python-brace-format
+msgid "({n} receipt)"
+msgid_plural "({n} receipts)"
+msgstr[0] "({n} ticket)"
+msgstr[1] "({n} tickets)"
+
+#, python-brace-format
+msgid "Barcode: {data}"
+msgstr "Código de barras: {data}"
+
+msgid "Cash drawer opened"
+msgstr "Apertura de cajón"
+
+#, python-brace-format
+msgid "{code} code not supported"
+msgstr "Código {code} no soportado"
+
+#, python-brace-format
+msgid "Logo stored in the printer ({key})"
+msgstr "Logo guardado en la impresora ({key})"
+
+#, python-brace-format
+msgid "Logo stored in the printer (no. {n})"
+msgstr "Logo guardado en la impresora (n.º {n})"
+
+msgid "Job with no printable content"
+msgstr "Trabajo sin contenido imprimible"
+
+msgid "Printing could not be started"
+msgstr "No se pudo iniciar la impresión"
+
+msgid "Print receipt"
+msgid_plural "Print receipts"
+msgstr[0] "Imprimir ticket"
+msgstr[1] "Imprimir tickets"
+
+msgid "Resend the original receipt (ESC/POS) to a receipt printer:"
+msgstr "Reenviar el ticket original (ESC/POS) a una impresora de tickets:"
+
+msgid ""
+"It prints exactly as from the POS, with paper cuts and cash drawer opening. Send it only to "
+"receipt printers: a regular printer would print meaningless symbols."
+msgstr ""
+"Sale exactamente igual que desde el TPV, con cortes y apertura de cajón. Envíalo solo a impresoras"
+" de tickets: en una impresora normal saldrían símbolos sin sentido."
+
+msgid "Print as a document on any printer…"
+msgstr "Imprimir como documento en cualquier impresora…"
+
+#, python-brace-format
+msgid "{n} receipt resent to {printer}"
+msgid_plural "{n} receipts resent to {printer}"
+msgstr[0] "{n} ticket reenviado a {printer}"
+msgstr[1] "{n} tickets reenviados a {printer}"
+
+msgid "The original PDF is missing for:"
+msgstr "Falta el PDF original de:"
+
+#, python-brace-format
+msgid "{n} document"
+msgid_plural "{n} documents"
+msgstr[0] "{n} documento"
+msgstr[1] "{n} documentos"
+
+msgid "Print"
+msgstr "Imprimir"
+
+#, python-brace-format
+msgid "Sent to {printer}"
+msgstr "Enviado a {printer}"
+
+msgid "Original ESC/POS receipt"
+msgstr "Ticket original ESC/POS"
+
+msgid "Receipt text"
+msgstr "Texto del ticket"
+
+msgid "Export"
+msgstr "Exportar"
+
+#, python-brace-format
+msgid "Exported: {path}"
+msgstr "Exportado: {path}"
+
+#, python-brace-format
+msgid "Export {n} document to…"
+msgid_plural "Export {n} documents to…"
+msgstr[0] "Exportar {n} documento a…"
+msgstr[1] "Exportar {n} documentos a…"
+
+#, python-brace-format
+msgid "{n} document exported to {folder}"
+msgid_plural "{n} documents exported to {folder}"
+msgstr[0] "{n} documento exportado a {folder}"
+msgstr[1] "{n} documentos exportados a {folder}"
+
+#, python-brace-format
+msgid "“{name}” could not be exported"
+msgstr "No se pudo exportar «{name}»"
+
+msgid "Document"
+msgstr "Documento"
+
+msgid "Printer"
+msgstr "Impresora"
+
+msgid "Date"
+msgstr "Fecha"
+
+msgid "Pages"
+msgstr "Págs."
+
+msgid "Size"
+msgstr "Tamaño"
+
+#, python-brace-format
+msgid "Today {time}"
+msgstr "Hoy {time}"
+
+#, python-brace-format
+msgid "Yesterday {time}"
+msgstr "Ayer {time}"
+
+msgid "Documents"
+msgstr "Documentos"
+
+msgid "Search by name or content…"
+msgstr "Buscar por nombre o contenido…"
+
+msgid "Print (Ctrl+P)"
+msgstr "Imprimir (Ctrl+P)"
+
+msgid "Save as PDF, original receipt or text (Ctrl+S)"
+msgstr "Guardar como PDF, ticket original o texto (Ctrl+S)"
+
+msgid "Folder"
+msgstr "Carpeta"
+
+msgid "Open the folder with the job's files"
+msgstr "Abrir la carpeta con los archivos del trabajo"
+
+msgid "Delete"
+msgstr "Eliminar"
+
+msgid "Delete from history (Del)"
+msgstr "Eliminar del historial (Supr)"
+
+#, python-brace-format
+msgid "Documents ({n})"
+msgstr "Documentos ({n})"
+
+msgid "No results for the search"
+msgstr "Sin resultados para la búsqueda"
+
+msgid ""
+"No documents yet.\n"
+"Print to one of the virtual printers and they will appear here."
+msgstr ""
+"Aún no hay documentos.\n"
+"Imprime en una de las impresoras virtuales y aparecerán aquí."
+
+#, python-brace-format
+msgid "{n} selected"
+msgid_plural "{n} selected"
+msgstr[0] "{n} seleccionado"
+msgstr[1] "{n} seleccionados"
+
+msgid "Could not print:"
+msgstr "No se pudo imprimir:"
+
+msgid "Could not export:"
+msgstr "No se pudo exportar:"
+
+msgid "Text copied"
+msgstr "Texto copiado"
+
+msgid "These documents have no text"
+msgstr "Estos documentos no tienen texto"
+
+#, python-brace-format
+msgid "Delete “{name}” from the history?"
+msgstr "¿Eliminar «{name}» del historial?"
+
+#, python-brace-format
+msgid "Delete {n} document from the history?"
+msgid_plural "Delete {n} documents from the history?"
+msgstr[0] "¿Eliminar {n} documento del historial?"
+msgstr[1] "¿Eliminar {n} documentos del historial?"
+
+msgid "Their files are deleted too."
+msgstr "Se borran también sus archivos."
+
+#, python-brace-format
+msgid "{n} document deleted"
+msgid_plural "{n} documents deleted"
+msgstr[0] "{n} documento eliminado"
+msgstr[1] "{n} documentos eliminados"
+
+msgid "Open in a large window"
+msgstr "Abrir en ventana grande"
+
+msgid "Print…"
+msgstr "Imprimir…"
+
+msgid "Export…"
+msgstr "Exportar…"
+
+msgid "Copy text"
+msgstr "Copiar texto"
+
+msgid "Open folder"
+msgstr "Abrir carpeta"
+
+#, python-brace-format
+msgid "Port {port} not available: {error}"
+msgstr "Puerto {port} no disponible: {error}"
+
+msgid "Previous page"
+msgstr "Página anterior"
+
+msgid "Next page"
+msgstr "Página siguiente"
+
+msgid "Zoom out (Ctrl + -, Ctrl + wheel)"
+msgstr "Reducir (Ctrl + -, Ctrl + rueda)"
+
+msgid "Zoom in (Ctrl + +, Ctrl + wheel)"
+msgstr "Ampliar (Ctrl + +, Ctrl + rueda)"
+
+msgid "Actual size (Ctrl + 0)"
+msgstr "Tamaño real (Ctrl + 0)"
+
+msgid "Fit width"
+msgstr "Ajustar al ancho"
+
+msgid "Whole page"
+msgstr "Página completa"
+
+msgid "Show/hide thumbnails"
+msgstr "Mostrar/ocultar miniaturas"
+
+msgid "Open in a large window (or double-click in the table)"
+msgstr "Abrir en ventana grande (o doble clic en la tabla)"
+
+msgid "Select a job to see its pages"
+msgstr "Selecciona un trabajo para ver sus páginas"
+
+msgid "This job has no pages"
+msgstr "Este trabajo no tiene páginas"
+
+msgid "Error displaying the page"
+msgstr "Error al mostrar la página"
+
+msgid "Printers"
+msgstr "Impresoras"
+
+msgid "New"
+msgstr "Nueva"
+
+msgid "Create a virtual printer (asks for administrator permission)"
+msgstr "Crear una impresora virtual (pide permiso de administrador)"
+
+msgid "Edit"
+msgstr "Editar"
+
+msgid "Name, driver, paper or port (also with a double-click)"
+msgstr "Nombre, driver, papel o puerto (también con doble clic)"
+
+msgid "Deletes the printer from Windows; its history is kept"
+msgstr "Elimina la impresora de Windows; su historial se conserva"
+
+#, python-brace-format
+msgid "{name} (deleted)"
+msgstr "{name} (eliminada)"
+
+msgid "Error"
+msgstr "Error"
+
+msgid "Receiving…"
+msgstr "Recibiendo…"
+
+#, python-brace-format
+msgid "Receiving from {address}…"
+msgstr "Recibiendo de {address}…"
+
+#, python-brace-format
+msgid "Processing “{name}” {page}/{total}"
+msgstr "Procesando «{name}» {page}/{total}"
+
+#, python-brace-format
+msgid "{n} page"
+msgid_plural "{n} pages"
+msgstr[0] "{n} página"
+msgstr[1] "{n} páginas"
+
+#, python-brace-format
+msgid "(+{n} queued)"
+msgstr "(+{n} en cola)"
+
+msgid "No jobs"
+msgstr "Sin trabajos"
+
+#, python-brace-format
+msgid "Last: {name} · {when}"
+msgstr "Último: {name} · {when}"
+
+msgid "receipts"
+msgstr "tickets"
+
+msgid "The printer no longer exists; its history is kept"
+msgstr "La impresora ya no existe; su historial se conserva"
+
+msgid "No printer"
+msgstr "Sin impresora"
+
+msgid "Jobs from earlier versions or PDFs dropped manually into spool_output"
+msgstr "Trabajos de versiones anteriores o PDFs dejados a mano en spool_output"
+
+#, python-brace-format
+msgid "{n} printing"
+msgid_plural "{n} printing"
+msgstr[0] "{n} imprimiendo"
+msgstr[1] "{n} imprimiendo"
+
+#, python-brace-format
+msgid "{n} printer"
+msgid_plural "{n} printers"
+msgstr[0] "{n} impresora"
+msgstr[1] "{n} impresoras"
+
+msgid "The whole history"
+msgstr "Todo el historial"
+
+msgid "All"
+msgstr "Todas"
+
+#, python-brace-format
+msgid "Creating “{name}”"
+msgstr "Creando «{name}»"
+
+#, python-brace-format
+msgid "Saving “{name}”"
+msgstr "Guardando «{name}»"
+
+#, python-brace-format
+msgid "Delete the printer “{name}” from the app?"
+msgstr "¿Eliminar la impresora «{name}» de la app?"
+
+#, python-brace-format
+msgid "Delete the printer “{name}” from Windows?"
+msgstr "¿Eliminar la impresora «{name}» de Windows?"
+
+msgid "Delete printer"
+msgstr "Eliminar impresora"
+
+msgid "Jobs already captured are kept in the history."
+msgstr "Los trabajos ya capturados se conservan en el historial."
+
+#, python-brace-format
+msgid "Deleting “{name}”"
+msgstr "Eliminando «{name}»"
+
+msgid "waiting for administrator permission…"
+msgstr "esperando permiso de administrador…"
+
+msgid "saving…"
+msgstr "guardando…"
+
+msgid "Printers updated"
+msgstr "Impresoras actualizadas"
+
+msgid "Edit printer"
+msgstr "Editar impresora"
+
+msgid "New virtual printer"
+msgstr "Nueva impresora virtual"
+
+msgid "Name:"
+msgstr "Nombre:"
+
+msgid "Type:"
+msgstr "Tipo:"
+
+msgid "Driver:"
+msgstr "Driver:"
+
+msgid ""
+"<b>Generic / Text Only</b>: the program sends ESC/POS directly (EasyPOS and most POS "
+"software).<br><b>Your printer's driver</b> (e.g. POS80): if the program prints with Windows "
+"graphics; this keeps logos and fonts."
+msgstr ""
+"<b>Generic / Text Only</b>: el programa envía ESC/POS directamente (EasyPOS y la mayoría de "
+"TPV).<br><b>Driver de tu impresora</b> (p. ej. POS80): si el programa imprime con gráficos de "
+"Windows; así se conservan logos y fuentes."
+
+msgid "Paper:"
+msgstr "Papel:"
+
+msgid "TCP port:"
+msgstr "Puerto TCP:"
+
+msgid "Accept connections from other computers on the network"
+msgstr "Aceptar conexiones de otros equipos de la red"
+
+msgid "Save"
+msgstr "Guardar"
+
+msgid "Create"
+msgstr "Crear"
+
+msgid "The type cannot be changed: create a new printer of another type"
+msgstr "El tipo no se puede cambiar: crea una impresora nueva de otro tipo"
+
+msgid "Windows will ask for administrator permission to create the printer."
+msgstr "Windows pedirá permiso de administrador para crear la impresora."
+
+msgid "Changing the name or the driver asks for administrator permission."
+msgstr "Cambiar el nombre o el driver pide permiso de administrador."
+
+msgid "(this computer's IP)"
+msgstr "(IP de este equipo)"
+
+#, python-brace-format
+msgid ""
+"Set up the POS to print to <b>{addresses}</b> (or 127.0.0.1:{port} from this computer). The first "
+"time, Windows may ask for permission in the firewall."
+msgstr ""
+"Configura el TPV para imprimir en <b>{addresses}</b> (o 127.0.0.1:{port} desde este equipo). La "
+"primera vez Windows puede pedir permiso en el firewall."
+
+#, python-brace-format
+msgid "Only from this computer: <b>127.0.0.1:{port}</b>"
+msgstr "Solo desde este equipo: <b>127.0.0.1:{port}</b>"
+
+#, python-brace-format
+msgid "Port {port} is already used by another network printer"
+msgstr "El puerto {port} ya lo usa otra impresora de red"
+
+#, python-brace-format
+msgid "Port {port} is in use by another program"
+msgstr "El puerto {port} está ocupado por otro programa"
+
+msgid "Documents (PDF)"
+msgstr "Documentos (PDF)"
+
+msgid "Receipts (Windows printer)"
+msgstr "Tickets (impresora de Windows)"
+
+msgid "Receipts over network (IP)"
+msgstr "Tickets por red (IP)"
+
+#, python-brace-format
+msgid "paper {mm} mm"
+msgstr "papel {mm} mm"
+
+msgid "local network"
+msgstr "red local"
+
+msgid "this computer only"
+msgstr "solo este equipo"
+
+#, python-brace-format
+msgid "port {port} ({scope})"
+msgstr "puerto {port} ({scope})"
+
+msgid "Paused"
+msgstr "En pausa"
+
+msgid "Cancelling"
+msgstr "Cancelando"
+
+msgid "Receiving"
+msgstr "Recibiendo"
+
+msgid "Printing"
+msgstr "Imprimiendo"
+
+msgid "Printed"
+msgstr "Impreso"
+
+msgid "(untitled)"
+msgstr "(sin nombre)"
+
+msgid "Queued"
+msgstr "En cola"
+
+msgid "The name cannot be empty"
+msgstr "El nombre no puede estar vacío"
+
+msgid "The name is too long (100 characters at most)"
+msgstr "El nombre es demasiado largo (máximo 100 caracteres)"
+
+#, python-brace-format
+msgid "The name cannot contain: {characters}"
+msgstr "El nombre no puede contener: {characters}"
+
+msgid "A printer with that name already exists"
+msgstr "Ya existe una impresora con ese nombre"
+
+msgid "Cancelled: administrator permission is required"
+msgstr "Cancelado: se necesitan permisos de administrador"
+
+#, python-brace-format
+msgid "The script ended with code {code}"
+msgstr "El script terminó con código {code}"
+
+#, python-brace-format
+msgid ""
+"Driver “{driver}” not found. Install it, or enable “Microsoft Print to PDF” in Windows features."
+msgstr ""
+"No se encuentra el driver «{driver}». Instálalo, o activa «Microsoft Print to PDF» en las "
+"características de Windows."
+
+msgid "Waiting for print jobs…"
+msgstr "Esperando trabajos de impresión…"
+
+msgid "&File"
+msgstr "&Archivo"
+
+msgid "Quit"
+msgstr "Salir"
+
+msgid "&Documents"
+msgstr "&Documentos"
+
+msgid "&Printers"
+msgstr "&Impresoras"
+
+msgid "New…"
+msgstr "Nueva…"
+
+msgid "Edit…"
+msgstr "Editar…"
+
+msgid "&Options"
+msgstr "&Opciones"
+
+msgid "&Help"
+msgstr "A&yuda"
+
+msgid "Language"
+msgstr "Idioma"
+
+msgid "Automatic (Windows language)"
+msgstr "Automático (idioma de Windows)"
+
+msgid "Help translate it…"
+msgstr "Ayuda a traducirla…"
+
+msgid "The language will change when the app restarts. Restart now?"
+msgstr "El idioma cambiará al reiniciar la app. ¿Reiniciar ahora?"
+
+msgid "Start with Windows"
+msgstr "Iniciar con Windows"
+
+msgid "Notify about each new document"
+msgstr "Avisar de cada documento nuevo"
+
+msgid "Show"
+msgstr "Mostrar"
+
+msgid "New printer…"
+msgstr "Nueva impresora…"
+
+#, python-brace-format
+msgid "{app} is still running"
+msgstr "{app} sigue funcionando"
+
+msgid "It keeps capturing in the background. Open it from this tray icon."
+msgstr "Sigue capturando en segundo plano. Ábrelo desde este icono de la bandeja."
+
+#, python-brace-format
+msgid "Printing on {n} printer"
+msgid_plural "Printing on {n} printers"
+msgstr[0] "Imprimiendo en {n} impresora"
+msgstr[1] "Imprimiendo en {n} impresoras"
+
+#, python-brace-format
+msgid "Document captured: {detail}"
+msgstr "Documento capturado: {detail}"
+
+msgid "Document captured"
+msgstr "Documento capturado"
+
+#, python-brace-format
+msgid "Error with {name}: {error}"
+msgstr "Error con {name}: {error}"
+
+msgid "job"
+msgstr "trabajo"
+
+msgid "It will start with Windows, in the tray"
+msgstr "Se iniciará con Windows, en la bandeja"
+
+msgid "It will no longer start with Windows"
+msgstr "Ya no se iniciará con Windows"
+
+#, python-brace-format
+msgid "Could not change starting with Windows: {error}"
+msgstr "No se pudo cambiar el inicio con Windows: {error}"
+
+msgid ""
+"Visual history of everything you print: PDF documents and ESC/POS receipts over USB or network."
+msgstr ""
+"Historial visual de todo lo que se imprime: documentos PDF y tickets ESC/POS por USB o por red."
+
+msgid "Free to use."
+msgstr "Uso gratuito."
+
+msgid "Licenses"
+msgstr "Licencias"
+
+#. THIRD_PARTY_NOTICES.txt is generated when building the executable
+#, python-brace-format
+msgid "({file} is generated when the executable is built)"
+msgstr "({file} se genera al compilar el ejecutable)"
+
+msgid "Open licenses folder"
+msgstr "Abrir carpeta de licencias"

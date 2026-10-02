@@ -1,0 +1,48 @@
+Virtual Printer — Licencia de uso / License
+Copyright © 2026 Virtual Printer. Todos los derechos reservados / All rights reserved.
+
+ESPAÑOL
+
+1. Uso gratuito. Puedes usar Virtual Printer sin coste, en tantos equipos como
+   quieras, para uso personal o profesional.
+
+2. Distribución. Puedes compartir el archivo de descarga original sin
+   modificar. No puedes venderlo ni distribuir versiones modificadas sin
+   permiso del autor.
+
+3. Componentes de terceros. Virtual Printer incluye componentes de terceros
+   con sus propias licencias, que se enumeran en THIRD_PARTY_NOTICES.txt y en
+   la carpeta "licenses". Nada en esta licencia limita los derechos que esas
+   licencias te conceden. En particular, en las bibliotecas Qt y PySide6
+   (LGPL v3) puedes sustituir esas bibliotecas por otras versiones compatibles
+   y realizar la ingeniería inversa necesaria para depurar esas
+   modificaciones.
+
+4. Sin garantía. Virtual Printer se ofrece "tal cual", sin garantías de ningún
+   tipo. El autor no es responsable de daños o pérdidas de datos derivados de
+   su uso.
+
+5. Donaciones. Las donaciones son voluntarias y no dan derecho a soporte ni
+   a funciones adicionales.
+
+ENGLISH
+
+1. Free use. You may use Virtual Printer at no cost, on as many computers as
+   you like, for personal or professional purposes.
+
+2. Distribution. You may share the original, unmodified download. You may not
+   sell it or distribute modified versions without the author's permission.
+
+3. Third-party components. Virtual Printer includes third-party components
+   under their own licenses, listed in THIRD_PARTY_NOTICES.txt and in the
+   "licenses" folder. Nothing in this license limits the rights those licenses
+   grant you. In particular, for the Qt and PySide6 libraries (LGPL v3) you may
+   replace those libraries with other compatible versions and reverse engineer
+   as needed to debug such modifications.
+
+4. No warranty. Virtual Printer is provided "as is", without warranty of any
+   kind. The author is not liable for damages or data loss arising from its
+   use.
+
+5. Donations. Donations are voluntary and do not entitle you to support or
+   additional features.
