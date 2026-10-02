@@ -174,10 +174,9 @@
 </footer>
 
 <script>
-  // Recordar el idioma elegido; en la portada inglesa, proponer el español a quien lo usa
   (function () {
     function get() { try { return localStorage.getItem("vp-lang"); } catch (e) { return null; } }
-    function set(v) { try { localStorage.setItem("vp-lang", v); } catch (e) { /* sin almacenamiento */ } }
+    function set(v) { try { localStorage.setItem("vp-lang", v); } catch (e) {  } }
     document.querySelectorAll("[data-lang-switch]").forEach(a => a.addEventListener("click", () => set(a.dataset.langSwitch)));
     if ("es" === "en" && "translate" === "index" && !get() && (navigator.language || "").toLowerCase().startsWith("es")
         && !document.referrer.startsWith(location.origin)) {
@@ -185,7 +184,6 @@
     }
   })();
 
-  // Analítica (GoatCounter: sin cookies ni datos personales). Solo si hay código configurado.
   const GOATCOUNTER = "virtualprinter";
   function track(name) {
     if (window.goatcounter && window.goatcounter.count) {

@@ -26,7 +26,7 @@
 <meta name="twitter:title" content="Virtual Printer — free print history for Windows">
 <meta name="twitter:description" content="Free Windows virtual printers that save every PDF and ESC/POS receipt you print, over USB or network, in a searchable visual history.">
 <meta name="twitter:image" content="https://virtualprinter.es/img/og-en.png">
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Virtual Printer", "applicationCategory": "UtilitiesApplication", "operatingSystem": "Windows 10, Windows 11", "softwareVersion": "1.0.0", "description": "Free Windows virtual printers that save every PDF and ESC/POS receipt you print, over USB or network, in a searchable visual history.", "url": "https://virtualprinter.es/", "downloadUrl": "https://virtualprinter.es/download/1.0.0/VirtualPrinter-1.0.0-setup.exe", "image": "https://virtualprinter.es/img/icon.png", "screenshot": "https://virtualprinter.es/img/screenshot-en.png", "inLanguage": ["en", "es"], "offers": {"@type": "Offer", "price": "0", "priceCurrency": "EUR"}, "publisher": {"@type": "Organization", "name": "Virtual Printer"}, "fileSize": "29.7 MB"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Virtual Printer", "applicationCategory": "UtilitiesApplication", "operatingSystem": "Windows 10, Windows 11", "softwareVersion": "1.0.1", "description": "Free Windows virtual printers that save every PDF and ESC/POS receipt you print, over USB or network, in a searchable visual history.", "url": "https://virtualprinter.es/", "downloadUrl": "https://virtualprinter.es/download/1.0.1/VirtualPrinter-1.0.1-setup.exe", "image": "https://virtualprinter.es/img/icon.png", "screenshot": "https://virtualprinter.es/img/screenshot-en.png", "inLanguage": ["en", "es"], "offers": {"@type": "Offer", "price": "0", "priceCurrency": "EUR"}, "publisher": {"@type": "Organization", "name": "Virtual Printer"}, "fileSize": "29.7 MB"}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Is it really free?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. You can use it for free, at home or at work, on as many computers as you like. There are no ads and no paid version; donations are voluntary."}}, {"@type": "Question", "name": "Windows SmartScreen warns me when I open the installer", "acceptedAnswer": {"@type": "Answer", "text": "The installer is not digitally signed yet. Click “More info” › “Run anyway”."}}, {"@type": "Question", "name": "Which POS programs does it work with?", "acceptedAnswer": {"@type": "Answer", "text": "With any program that prints ESC/POS receipts to a Windows printer (choose “Generic / Text Only”) or to a network printer by IP (port 9100). If the program prints with Windows graphics, use your receipt printer’s driver (e.g. POS80) instead."}}, {"@type": "Question", "name": "Where are my documents stored?", "acceptedAnswer": {"@type": "Answer", "text": "Only on your computer, in %USERPROFILE%\\.virtual_printer. The app does not send your documents or any usage data anywhere."}}, {"@type": "Question", "name": "What do I need?", "acceptedAnswer": {"@type": "Answer", "text": "Windows 10 or 11 (64-bit). The “Microsoft Print to PDF” feature for document printers, which Windows includes by default."}}, {"@type": "Question", "name": "How do I uninstall it?", "acceptedAnswer": {"@type": "Answer", "text": "Delete the virtual printers from the app first if you no longer want them, then uninstall Virtual Printer from Windows Settings › Apps. Your captured documents are kept in your user folder until you delete them."}}]}</script>
 <style>
   :root {
@@ -129,10 +129,10 @@
     <h1>Everything you print, saved and searchable</h1>
     <p class="lead">Free virtual printers for Windows that keep a visual history of every PDF document and POS receipt (ESC/POS) — over USB or over the network.</p>
     <div class="buttons">
-      <a class="btn primary" href="download/1.0.0/VirtualPrinter-1.0.0-setup.exe" data-track="download-installer-1.0.0">⬇ Download for Windows</a>
+      <a class="btn primary" href="download/1.0.1/VirtualPrinter-1.0.1-setup.exe" data-track="download-installer-1.0.1">⬇ Download for Windows</a>
       <a class="btn coffee" href="https://ko-fi.com/castorad" rel="noopener" target="_blank" data-track="kofi">☕ Buy me a coffee</a>
     </div>
-    <p class="note">Free · Windows 10/11 · Installs without administrator rights · Version 1.0.0 · 29.7 MB</p>
+    <p class="note">Free · Windows 10/11 · Installs without administrator rights · Version 1.0.1 · 29.7 MB</p>
     <div class="shot"><img src="img/screenshot-en.png" width="1280" height="760" alt="Virtual Printer window: virtual printers, captured documents and a POS receipt preview"></div>
   </div>
 
@@ -214,7 +214,6 @@
             </select>
           </label>
           <label>Message<textarea name="message" required maxlength="5000"></textarea></label>
-          <!-- Trampa para bots: invisible para las personas, los bots suelen rellenarla -->
           <div class="trap" aria-hidden="true">
             <label>Website<input name="_url" tabindex="-1" autocomplete="off"></label>
           </div>
@@ -248,10 +247,9 @@
 </footer>
 
 <script>
-  // Recordar el idioma elegido; en la portada inglesa, proponer el español a quien lo usa
   (function () {
     function get() { try { return localStorage.getItem("vp-lang"); } catch (e) { return null; } }
-    function set(v) { try { localStorage.setItem("vp-lang", v); } catch (e) { /* sin almacenamiento */ } }
+    function set(v) { try { localStorage.setItem("vp-lang", v); } catch (e) {  } }
     document.querySelectorAll("[data-lang-switch]").forEach(a => a.addEventListener("click", () => set(a.dataset.langSwitch)));
     if ("en" === "en" && "index" === "index" && !get() && (navigator.language || "").toLowerCase().startsWith("es")
         && !document.referrer.startsWith(location.origin)) {
@@ -259,7 +257,6 @@
     }
   })();
 
-  // Analítica (GoatCounter: sin cookies ni datos personales). Solo si hay código configurado.
   const GOATCOUNTER = "virtualprinter";
   function track(name) {
     if (window.goatcounter && window.goatcounter.count) {
@@ -275,9 +272,6 @@
   document.querySelectorAll("[data-track]").forEach(el => el.addEventListener("click", () => track(el.dataset.track)));
 </script>
 <script>
-  // Formulario de contacto: EasyForms (reenvía a tu correo sin publicarlo) + barreras contra bots:
-  // campo trampa invisible (_url, que EasyForms también descarta en su servidor), tiempo mínimo de relleno
-  // y, si hay sitekey, hCaptcha (EasyForms comprueba el token con el secreto del formulario)
   (function () {
     const FORM_ID = "";
     const SITEKEY = "";
@@ -308,7 +302,6 @@
     form.addEventListener("submit", async (event) => {
       event.preventDefault();
       const data = new FormData(form);
-      // Un bot que rellena el campo trampa o envía en un instante recibe un "enviado" falso
       if (data.get("_url") || (Date.now() - loadedAt) / 1000 < MIN_SECONDS) {
         show(text.ok, "ok"); form.reset(); return;
       }
@@ -343,7 +336,7 @@
         show(text.error, "err");
       } finally {
         button.disabled = false;
-        if (SITEKEY && window.hcaptcha) { try { window.hcaptcha.reset(); } catch (e) { /* sin captcha cargado */ } }
+        if (SITEKEY && window.hcaptcha) { try { window.hcaptcha.reset(); } catch (e) {  } }
       }
     });
   })();
