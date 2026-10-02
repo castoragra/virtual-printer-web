@@ -1,0 +1,12 @@
+{
+  "latest": "1.0.0",
+  "versions": [
+    {
+      "version": "1.0.0",
+      "date": "2026-10-02",
+      "file": "1.0.0/VirtualPrinter-1.0.0-setup.exe",
+      "size": 31120865,
+      "sha256": "D29F00B09D097BFA5066692B3D083825DABCE008CC2478E088CAD1795B185512"
+    }
+  ]
+}
